@@ -1,0 +1,162 @@
+INFO  2019-07-09 14:17:07.202 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 受付ソケット接続を開始します
+INFO  2019-07-09 14:17:07.275 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 受付:接続します
+DEBUG 2019-07-09 14:17:07.286 [1] ARISSend.Model.ToHisInfoTcpClient ConnectTcp - ソケット接続します。Host=127.0.0.1, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-09 14:17:07.329 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-09 14:17:08.735 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-09 14:17:08.755 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-09 14:17:08.766 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました。stream == null
+DEBUG 2019-07-09 14:17:08.775 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-09 14:17:08.788 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました
+DEBUG 2019-07-09 14:17:08.793 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+ERROR 2019-07-09 14:17:08.848 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - 致命的なエラーが発生しました。
+ERROR 2019-07-09 14:17:08.884 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - System.Net.Sockets.SocketException (0x80004005): 対象のコンピューターによって拒否されたため、接続できませんでした。 127.0.0.1:16030
+   場所 System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   場所 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   場所 System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   場所 RISCommonLibrary.Lib.Compornent.SimpleTcpClient.Connect(String host, Int32 port, Int32 connectionTimeout, Int32 sendTimeout, Int32 receiveTimeout) 場所 C:\taira_work\RIS\Library\RISCommonLibrary\Lib\Compornent\SimpleTcpClient.cs:行 86
+   場所 ARISSend.Model.ToHisInfoTcpClient.ConnectTcp(ISocketParameter socketParameter) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoTcpClient.cs:行 187
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.ConnectTcp() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 110
+   場所 ARISSend.Model.ToHisInfoSender.ConnectTcp(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoSender.cs:行 58
+   場所 ARISSend.Model.ServiceLooper.ConnectTcpReceipt() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 162
+INFO  2019-07-09 14:17:08.891 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 受付ソケット接続を開始しました
+INFO  2019-07-09 14:17:11.418 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 受付ソケット接続を切断します
+INFO  2019-07-09 14:17:11.424 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 受付:切断します
+DEBUG 2019-07-09 14:17:11.430 [1] ARISSend.Model.ToHisInfoTcpClient DisConnectTcp - DisConnectTcpします
+DEBUG 2019-07-09 14:17:11.437 [1] ARISSend.Model.ToHisInfoTcpClient DisConnectTcp - ソケット切断します
+DEBUG 2019-07-09 14:17:11.442 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-09 14:17:11.450 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-09 14:17:11.455 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました。stream == null
+DEBUG 2019-07-09 14:17:11.460 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-09 14:17:11.533 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました。client == null
+DEBUG 2019-07-09 14:17:11.540 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+DEBUG 2019-07-09 14:17:11.546 [1] ARISSend.Model.ToHisInfoTcpClient DisConnectTcp - DisConnectTcpしました
+INFO  2019-07-09 14:17:11.554 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 受付ソケット接続を切断しました
+INFO  2019-07-09 14:17:17.554 [1] ARISSend.ARISSendForm patientRequestCheckBox_CheckedChanged - 患者接続開始要求を開始します
+DEBUG 2019-07-09 14:17:17.562 [1] ARISSend.Model.MessageCreator.BaseMsgCreator RequestOpen - 患者要求:回線接続要求を送信します
+ERROR 2019-07-09 14:17:17.784 [1] ARISSend.Model.ServiceLooper RequestOpenPatient - 致命的なエラーが発生しました。
+ERROR 2019-07-09 14:17:17.791 [1] ARISSend.Model.ServiceLooper RequestOpenPatient - RISCommonLibrary.Lib.Exceptions.RISIfSocketException: 接続が確立されていません
+   場所 ARISSend.Model.ToHisInfoTcpClient.SendRecv(BaseMsgData msgData) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoTcpClient.cs:行 60
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.RequestConnection(CreateMsgDataForConnection func) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 153
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.RequestOpen() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 127
+   場所 ARISSend.Model.ToHisInfoSender.RequestOpen(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoSender.cs:行 85
+   場所 ARISSend.Model.ServiceLooper.RequestOpenPatient() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 298
+INFO  2019-07-09 14:17:17.803 [1] ARISSend.ARISSendForm patientRequestCheckBox_CheckedChanged - 患者接続開始要求を終了しました
+INFO  2019-07-09 14:17:19.137 [1] ARISSend.ARISSendForm patientRequestCheckBox_CheckedChanged - 患者切断開始要求を開始します
+DEBUG 2019-07-09 14:17:19.145 [1] ARISSend.Model.MessageCreator.BaseMsgCreator RequestClose - 患者要求:回線切断要求を送信します
+ERROR 2019-07-09 14:17:19.197 [1] ARISSend.Model.ServiceLooper RequestClosePatient - 致命的なエラーが発生しました。
+ERROR 2019-07-09 14:17:19.202 [1] ARISSend.Model.ServiceLooper RequestClosePatient - RISCommonLibrary.Lib.Exceptions.RISIfSocketException: 接続が確立されていません
+   場所 ARISSend.Model.ToHisInfoTcpClient.SendRecv(BaseMsgData msgData) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoTcpClient.cs:行 60
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.RequestConnection(CreateMsgDataForConnection func) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 153
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.RequestClose() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 133
+   場所 ARISSend.Model.ToHisInfoSender.RequestClose(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoSender.cs:行 99
+   場所 ARISSend.Model.ServiceLooper.RequestClosePatient() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 311
+INFO  2019-07-09 14:17:19.212 [1] ARISSend.ARISSendForm patientRequestCheckBox_CheckedChanged - 患者切断開始要求を終了しました
+ERROR 2019-07-09 16:13:08.510 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:13:08.557 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12154: TNS: 指定された接続識別子を解決できませんでした    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:23:21.576 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:23:21.659 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:23:24.264 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:23:24.270 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:23:26.590 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:23:26.595 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:23:29.334 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:23:29.418 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+DEBUG 2019-07-09 16:23:29.434 [1] ARISSend.Model.ServiceLooper StopLoop - プログラムへ停止指示します
+ERROR 2019-07-09 16:28:21.587 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:28:21.663 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:28:24.001 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:28:24.006 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:28:26.298 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:28:26.304 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:28:28.654 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:28:28.659 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+INFO  2019-07-09 16:28:28.822 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 実施:切断します
+DEBUG 2019-07-09 16:28:28.884 [1] ARISSend.Model.ToHisInfoTcpClient DisConnectTcp - DisConnectTcpします
+INFO  2019-07-09 16:28:28.902 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 受付:切断します
+DEBUG 2019-07-09 16:28:28.915 [1] ARISSend.Model.ToHisInfoTcpClient DisConnectTcp - DisConnectTcpします
+INFO  2019-07-09 16:28:28.926 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 患者要求:切断します
+DEBUG 2019-07-09 16:28:28.933 [1] ARISSend.Model.ToHisInfoTcpClient DisConnectTcp - DisConnectTcpします
+ERROR 2019-07-09 16:28:31.330 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:28:31.335 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:28:33.657 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:28:33.662 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:28:35.973 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:28:35.979 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:28:38.274 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:28:38.280 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:28:40.617 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:28:40.622 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:28:42.924 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:28:42.933 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:28:45.256 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:28:45.261 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123
+ERROR 2019-07-09 16:28:47.553 [1] ARISSend.Model.ServiceLooper ExcecuteOne - 致命的なエラーが発生しました。
+ERROR 2019-07-09 16:28:47.559 [1] ARISSend.Model.ServiceLooper ExcecuteOne - Oracle.DataAccess.Client.OracleException ORA-12541: TNS: リスナーがありません    場所 Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+   場所 Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+   場所 Oracle.DataAccess.Client.OracleConnection.Open()
+   場所 RISODPLibrary.Lib.Utils.ODPConnectionUtils.Connect(String connectionString) 場所 C:\taira_work\RIS\Library\RISODPLibrary\Lib\Utils\ODPConnectionUtils.cs:行 20
+   場所 ARISSend.Model.ServiceLooper.ExcecuteOne() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 123

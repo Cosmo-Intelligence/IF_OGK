@@ -1,0 +1,1 @@
+ALTER TRIGGER trg_tohisinfo_insert_report DISABLE;

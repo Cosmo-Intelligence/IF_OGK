@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35168D47-191A-4BF8-9E9A-36C815B9CB5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RISCommonLibrary</RootNamespace>
+    <AssemblyName>RISCommonLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Lib\Compornent\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lib\Compornent\NumericTextBox.Designer.cs">
+      <DependentUpon>NumericTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\Compornent\SimpleTcpClient.cs" />
+    <Compile Include="Lib\Debugger\LogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lib\Debugger\LogForm.Designer.cs">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\Debugger\Performance.cs" />
+    <Compile Include="Lib\Debugger\QueryDebugger.cs" />
+    <Compile Include="Lib\Debugger\RichTextBoxWriterTraceListener.cs" />
+    <Compile Include="Lib\Debugger\TextBoxWriterTraceListener.cs" />
+    <Compile Include="Lib\Debugger\ToolStripStatusLabelWriterTraceListener.cs" />
+    <Compile Include="Lib\Exceptions\RISIfException.cs" />
+    <Compile Include="Lib\Exceptions\RISIfSocketException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lib\Exceptions\RISIfTelegraphKindException.cs" />
+    <Compile Include="Lib\LogCleaner\ILogCleaner.cs" />
+    <Compile Include="Lib\LogCleaner\LogCleanerLog4Net.cs" />
+    <Compile Include="Lib\LogCleaner\LogCleanerManager.cs" />
+    <Compile Include="Lib\LogCleaner\LogCleanerYYYYMMDDDir.cs" />
+    <Compile Include="Lib\MessageLog\MessageLogger.cs" />
+    <Compile Include="Lib\Msg\ArrayNode.cs" />
+    <Compile Include="Lib\Msg\BaseMsg.cs" />
+    <Compile Include="Lib\Msg\BaseNode.cs" />
+    <Compile Include="Lib\Msg\BaseRootNode.cs" />
+    <Compile Include="Lib\Msg\CollectionNode.cs" />
+    <Compile Include="Lib\Msg\Common\CommonRootNode.cs" />
+    <Compile Include="Lib\Msg\Common\CommunicationControl\CommunicationControlAggregate.cs" />
+    <Compile Include="Lib\Msg\Common\CommunicationControl\CommunicationControlNodeInfo.cs" />
+    <Compile Include="Lib\Msg\Common\CommunicationControl\ICommunicationControl.cs" />
+    <Compile Include="Lib\Msg\Common\Exam\Detail\ExamDetailDynamicArray.cs" />
+    <Compile Include="Lib\Msg\Common\Exam\Detail\ExamDetailAggregate.cs" />
+    <Compile Include="Lib\Msg\Common\Exam\ExamAggregate.cs" />
+    <Compile Include="Lib\Msg\Common\Exam\ExamNodeInfo.cs" />
+    <Compile Include="Lib\Msg\Common\Exam\IExam.cs" />
+    <Compile Include="Lib\Msg\Common\IArrayNode.cs" />
+    <Compile Include="Lib\Msg\Common\MsgUtils.cs" />
+    <Compile Include="Lib\Msg\Common\Order\Detail\OrderDetailArray.cs" />
+    <Compile Include="Lib\Msg\Common\Order\Detail\OrderDetailArrayHelper.cs" />
+    <Compile Include="Lib\Msg\Common\Order\Detail\OrderDetailArrayHelperItem.cs" />
+    <Compile Include="Lib\Msg\Common\Order\Detail\OrderDetailAggregate.cs" />
+    <Compile Include="Lib\Msg\Common\Order\IOrder.cs" />
+    <Compile Include="Lib\Msg\Common\Order\OrderAggregate.cs" />
+    <Compile Include="Lib\Msg\Common\Order\OrderNodeInfo.cs" />
+    <Compile Include="Lib\Msg\Common\PatientAttribute\IPatientAttribute.cs" />
+    <Compile Include="Lib\Msg\Common\PatientAttribute\Result\PatientResultAllergy.cs" />
+    <Compile Include="Lib\Msg\Common\PatientAttribute\Result\PatientResultBlood.cs" />
+    <Compile Include="Lib\Msg\Common\PatientAttribute\Result\PatientResultExamData.cs" />
+    <Compile Include="Lib\Msg\Common\PatientAttribute\Result\PatientResultInfection.cs" />
+    <Compile Include="Lib\Msg\Common\PatientAttribute\Result\PatientResultItemBase.cs" />
+    <Compile Include="Lib\Msg\Common\PatientAttribute\PatientAttributeAggregate.cs" />
+    <Compile Include="Lib\Msg\Common\PatientAttribute\PatientAttributeNodeInfo.cs" />
+    <Compile Include="Lib\Msg\Common\PatientAttribute\Result\PatientResultHelper.cs" />
+    <Compile Include="Lib\Msg\Common\Receipt\IReceipt.cs" />
+    <Compile Include="Lib\Msg\Common\Receipt\ReceiptAggregate.cs" />
+    <Compile Include="Lib\Msg\Common\Receipt\ReceiptNodeInfo.cs" />
+    <Compile Include="Lib\Msg\Common\ReportDokuei\IReportDokuei.cs" />
+    <Compile Include="Lib\Msg\Common\ReportDokuei\ReportDokueiAggregate.cs" />
+    <Compile Include="Lib\Msg\Common\ReportDokuei\ReportDokueiNodeInfo.cs" />
+    <Compile Include="Lib\Msg\Common\SumiAccelConst.cs" />
+    <Compile Include="Lib\Msg\ConnectionClose\ConnectionCloseMsg.cs" />
+    <Compile Include="Lib\Msg\ConnectionClose\ConnectionCloseNodeInfo.cs" />
+    <Compile Include="Lib\Msg\ConnectionClose\ConnectionCloseRoot.cs" />
+    <Compile Include="Lib\Msg\ConnectionOpen\ConnectionOpenMsg.cs" />
+    <Compile Include="Lib\Msg\ConnectionOpen\ConnectionOpenNodeInfo.cs" />
+    <Compile Include="Lib\Msg\ConnectionOpen\ConnectionOpenRoot.cs" />
+    <Compile Include="Lib\Msg\DataNode.cs" />
+    <Compile Include="Lib\Msg\DataNodeFormat.cs" />
+    <Compile Include="Lib\Msg\DynamicArrayNode.cs" />
+    <Compile Include="Lib\Msg\Exam\ExamMsg.cs" />
+    <Compile Include="Lib\Msg\Exam\ExamRoot.cs" />
+    <Compile Include="Lib\Msg\Exam\ExamRootNodeInfo.cs" />
+    <Compile Include="Lib\Msg\FixedArrayNode.cs" />
+    <Compile Include="Lib\Msg\Hospitalize\HospitalizeMsg.cs" />
+    <Compile Include="Lib\Msg\Hospitalize\HospitalizeNodeInfo.cs" />
+    <Compile Include="Lib\Msg\Hospitalize\HospitalizeRoot.cs" />
+    <Compile Include="Lib\Msg\AggregateNode.cs" />
+    <Compile Include="Lib\Msg\ReportDokuei\ReportDokueiRoot.cs" />
+    <Compile Include="Lib\Msg\ReportDokuei\ReportDokueiMsg.cs" />
+    <Compile Include="Lib\Msg\ReportDokuei\ReportDokueiRootNodeInfo.cs" />
+    <Compile Include="Lib\Msg\Response\BaseResponseMsg.cs" />
+    <Compile Include="Lib\Utils\CommandUtils.cs" />
+    <Compile Include="Lib\Utils\CommonConst.cs" />
+    <Compile Include="Lib\Utils\DwmWin32Api.cs" />
+    <Compile Include="Lib\Utils\LambdaUtil.cs" />
+    <Compile Include="Lib\Utils\MatchStringFinder.cs" />
+    <Compile Include="Lib\Utils\MBCSHelper.cs" />
+    <Compile Include="Lib\Msg\MsgCommonInfo.cs" />
+    <Compile Include="Lib\Msg\MsgConst.cs" />
+    <Compile Include="Lib\Exceptions\MsgException.cs" />
+    <Compile Include="Lib\Msg\MsgFactory.cs" />
+    <Compile Include="Lib\Msg\MsgFormat.cs" />
+    <Compile Include="Lib\Msg\NodeFactory.cs" />
+    <Compile Include="Lib\Msg\NodeInfo.cs" />
+    <Compile Include="Lib\Msg\Order\OrderMsg.cs" />
+    <Compile Include="Lib\Msg\Order\OrderRoot.cs" />
+    <Compile Include="Lib\Msg\Order\OrderRootNodeInfo.cs" />
+    <Compile Include="Lib\Msg\Receipt\ReceiptMsg.cs" />
+    <Compile Include="Lib\Msg\Receipt\ReceiptRoot.cs" />
+    <Compile Include="Lib\Msg\Receipt\ReceiptRootNodeInfo.cs" />
+    <Compile Include="Lib\Msg\RegistMsgToFactory.cs" />
+    <Compile Include="Lib\Msg\RequestPatient\RequestPatientMsg.cs" />
+    <Compile Include="Lib\Msg\RequestPatient\RequestPatientRoot.cs" />
+    <Compile Include="Lib\Msg\RequestPatient\RequestPatientRootNodeInfo.cs" />
+    <Compile Include="Lib\Msg\ResponseWithPatient\ResponseWithPatientMsg.cs" />
+    <Compile Include="Lib\Msg\ResponseWithPatient\ResponseWithPatientRoot.cs" />
+    <Compile Include="Lib\Msg\ResponseWithPatient\ResponseWithPatientRootNodeInfo.cs" />
+    <Compile Include="Lib\Msg\Response\ResponseMsg.cs" />
+    <Compile Include="Lib\Msg\Response\ResponseRoot.cs" />
+    <Compile Include="Lib\Msg\Response\ResponseRootNodeInfo.cs" />
+    <Compile Include="Lib\Msg\StringIterator.cs" />
+    <Compile Include="Lib\Utils\CompornentUtils.cs" />
+    <Compile Include="Lib\Utils\DataReaderUtils.cs" />
+    <Compile Include="Lib\Utils\DateTimeUtils.cs" />
+    <Compile Include="Lib\Utils\ConnectionUtils.cs" />
+    <Compile Include="Lib\Utils\log4netUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lib\Utils\MiscUtils.cs" />
+    <Compile Include="Lib\Utils\ParameterUtils.cs" />
+    <Compile Include="Lib\Utils\StringBuilderUtils.cs" />
+    <Compile Include="Lib\Utils\StringUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Lib\Debugger\LogForm.resx">
+      <DependentUpon>LogForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

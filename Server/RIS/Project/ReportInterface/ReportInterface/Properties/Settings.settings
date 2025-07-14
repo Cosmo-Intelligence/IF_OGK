@@ -1,0 +1,22 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ReportInterface.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionStringReport" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;DATA SOURCE=OHG_REPORT;PASSWORD=MRMS1;PERSIST SECURITY INFO=True;STATEMENT CACHE SIZE=100;USER ID=MRMS&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Oracle.DataAccess.Client&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">DATA SOURCE=OHG_REPORT;PASSWORD=MRMS1;PERSIST SECURITY INFO=True;STATEMENT CACHE SIZE=100;USER ID=MRMS</Value>
+    </Setting>
+    <Setting Name="ConnectionStringRIS" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;DATA SOURCE=OHG_REPORT;PASSWORD=RRIS_SHIFT1;PERSIST SECURITY INFO=True;STATEMENT CACHE SIZE=100;USER ID=RRIS_SHIFT&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Oracle.DataAccess.Client&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">DATA SOURCE=OHG_REPORT;PASSWORD=RRIS_SHIFT1;PERSIST SECURITY INFO=True;STATEMENT CACHE SIZE=100;USER ID=RRIS_SHIFT</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

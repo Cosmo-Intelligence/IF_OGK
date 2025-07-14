@@ -1,0 +1,430 @@
+INFO  2019-07-23 09:44:00.953 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 既読:切断します
+DEBUG 2019-07-23 09:44:01.029 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpします
+INFO  2019-07-23 10:05:13.598 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 10:05:18.948 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 既読:接続します
+DEBUG 2019-07-23 10:05:18.957 [1] ARISSend.Model.ReportDokueiInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.50, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-23 10:05:18.964 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-23 10:05:20.086 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-23 10:05:20.098 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-23 10:05:20.104 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました。stream == null
+DEBUG 2019-07-23 10:05:20.109 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-23 10:05:20.114 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました
+DEBUG 2019-07-23 10:05:20.119 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+ERROR 2019-07-23 10:05:20.167 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - 致命的なエラーが発生しました。
+ERROR 2019-07-23 10:05:20.201 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - System.Net.Sockets.SocketException (0x80004005): 対象のコンピューターによって拒否されたため、接続できませんでした。 192.168.100.50:16030
+   場所 System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   場所 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   場所 System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   場所 RISCommonLibrary.Lib.Compornent.SimpleTcpClient.Connect(String host, Int32 port, Int32 connectionTimeout, Int32 sendTimeout, Int32 receiveTimeout) 場所 C:\taira_work\RIS\Library\RISCommonLibrary\Lib\Compornent\SimpleTcpClient.cs:行 86
+   場所 ARISSend.Model.ReportDokueiInfoTcpClient.ConnectTcp(ISocketParameter socketParameter) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoTcpClient.cs:行 187
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.ConnectTcp() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 110
+   場所 ARISSend.Model.ReportDokueiInfoSender.ConnectTcp(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoSender.cs:行 58
+   場所 ARISSend.Model.ServiceLooper.ConnectTcpReceipt() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 164
+INFO  2019-07-23 10:05:20.211 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+DEBUG 2019-07-23 10:08:51.077 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - SELECT RI.ID, RI.REVISION FROM REPORTINFO RI LEFT JOIN REPORTDOKUEIINFO RD ON  RI.ID = RD.ID WHERE RI.CHECKFLG = '1' AND RD.ID IS NULL
+DEBUG 2019-07-23 10:08:51.160 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - リーダオブジェクトをログ出力します
+DEBUG 2019-07-23 10:08:51.177 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - Index:0, Name:ID, FieldType:System.String, IsDBNull:False, Value:000000000000000012
+DEBUG 2019-07-23 10:08:51.183 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - Index:1, Name:REVISION, FieldType:System.Int16, IsDBNull:False, Value:0
+INFO  2019-07-23 10:08:51.234 [1] ARISSend.Model.ReportDokueiInfoSender Send - IF処理開始します。RequestID=000000000000000012
+DEBUG 2019-07-23 10:08:51.240 [1] ARISSend.Model.ReportDokueiInfoSender Send - 古いログファイルを削除します
+DEBUG 2019-07-23 10:08:51.270 [1] ARISSend.Model.ReportDokueiInfoSender Send - 電文作成者を作成します
+INFO  2019-07-23 10:08:51.277 [1] ARISSend.Model.ReportDokueiInfoSender Send - 電文を作成します。種別=000000000000000012
+INFO  2019-07-23 10:09:24.438 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 10:09:26.559 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 既読:接続します
+DEBUG 2019-07-23 10:09:26.569 [1] ARISSend.Model.ReportDokueiInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.50, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-23 10:09:26.575 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-23 10:09:27.651 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-23 10:09:27.657 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-23 10:09:27.663 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました。stream == null
+DEBUG 2019-07-23 10:09:27.669 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-23 10:09:27.675 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました
+DEBUG 2019-07-23 10:09:27.681 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+ERROR 2019-07-23 10:09:27.734 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - 致命的なエラーが発生しました。
+ERROR 2019-07-23 10:09:27.751 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - System.Net.Sockets.SocketException (0x80004005): 対象のコンピューターによって拒否されたため、接続できませんでした。 192.168.100.50:16030
+   場所 System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   場所 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   場所 System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   場所 RISCommonLibrary.Lib.Compornent.SimpleTcpClient.Connect(String host, Int32 port, Int32 connectionTimeout, Int32 sendTimeout, Int32 receiveTimeout) 場所 C:\taira_work\RIS\Library\RISCommonLibrary\Lib\Compornent\SimpleTcpClient.cs:行 86
+   場所 ARISSend.Model.ReportDokueiInfoTcpClient.ConnectTcp(ISocketParameter socketParameter) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoTcpClient.cs:行 187
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.ConnectTcp() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 110
+   場所 ARISSend.Model.ReportDokueiInfoSender.ConnectTcp(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoSender.cs:行 58
+   場所 ARISSend.Model.ServiceLooper.ConnectTcpReceipt() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 164
+INFO  2019-07-23 10:09:27.757 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+INFO  2019-07-23 10:09:36.338 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を切断します
+INFO  2019-07-23 10:09:36.347 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 既読:切断します
+DEBUG 2019-07-23 10:09:36.354 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpします
+DEBUG 2019-07-23 10:09:36.359 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - ソケット切断します
+DEBUG 2019-07-23 10:09:36.365 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-23 10:09:36.370 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-23 10:09:36.376 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました。stream == null
+DEBUG 2019-07-23 10:09:36.382 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-23 10:09:36.387 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました。client == null
+DEBUG 2019-07-23 10:09:36.392 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+DEBUG 2019-07-23 10:09:36.398 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpしました
+INFO  2019-07-23 10:09:36.405 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を切断しました
+INFO  2019-07-23 10:09:39.642 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 10:09:44.685 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 既読:接続します
+DEBUG 2019-07-23 10:09:44.692 [1] ARISSend.Model.ReportDokueiInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.50, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-23 10:09:44.698 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-23 10:09:45.771 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-23 10:09:45.777 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-23 10:09:45.783 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました。stream == null
+DEBUG 2019-07-23 10:09:45.789 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-23 10:09:45.795 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました
+DEBUG 2019-07-23 10:09:45.802 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+ERROR 2019-07-23 10:09:45.855 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - 致命的なエラーが発生しました。
+ERROR 2019-07-23 10:09:45.861 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - System.Net.Sockets.SocketException (0x80004005): 対象のコンピューターによって拒否されたため、接続できませんでした。 192.168.100.50:16030
+   場所 System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   場所 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   場所 System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   場所 RISCommonLibrary.Lib.Compornent.SimpleTcpClient.Connect(String host, Int32 port, Int32 connectionTimeout, Int32 sendTimeout, Int32 receiveTimeout) 場所 C:\taira_work\RIS\Library\RISCommonLibrary\Lib\Compornent\SimpleTcpClient.cs:行 86
+   場所 ARISSend.Model.ReportDokueiInfoTcpClient.ConnectTcp(ISocketParameter socketParameter) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoTcpClient.cs:行 187
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.ConnectTcp() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 110
+   場所 ARISSend.Model.ReportDokueiInfoSender.ConnectTcp(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoSender.cs:行 58
+   場所 ARISSend.Model.ServiceLooper.ConnectTcpReceipt() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 164
+INFO  2019-07-23 10:09:45.868 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+INFO  2019-07-23 10:10:35.403 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を切断します
+INFO  2019-07-23 10:10:35.407 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 既読:切断します
+DEBUG 2019-07-23 10:10:35.414 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpします
+DEBUG 2019-07-23 10:10:35.420 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - ソケット切断します
+DEBUG 2019-07-23 10:10:35.426 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-23 10:10:35.431 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-23 10:10:35.437 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました。stream == null
+DEBUG 2019-07-23 10:10:35.442 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-23 10:10:35.448 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました。client == null
+DEBUG 2019-07-23 10:10:35.453 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+DEBUG 2019-07-23 10:10:35.458 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpしました
+INFO  2019-07-23 10:10:35.466 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を切断しました
+INFO  2019-07-23 10:10:35.970 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 10:10:37.964 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 既読:接続します
+DEBUG 2019-07-23 10:10:37.972 [1] ARISSend.Model.ReportDokueiInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.50, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-23 10:10:37.979 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-23 10:10:39.057 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-23 10:10:39.067 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-23 10:10:39.074 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました。stream == null
+DEBUG 2019-07-23 10:10:39.084 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-23 10:10:39.093 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました
+DEBUG 2019-07-23 10:10:39.098 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+ERROR 2019-07-23 10:10:39.147 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - 致命的なエラーが発生しました。
+ERROR 2019-07-23 10:10:39.154 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - System.Net.Sockets.SocketException (0x80004005): 対象のコンピューターによって拒否されたため、接続できませんでした。 192.168.100.50:16030
+   場所 System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   場所 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   場所 System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   場所 RISCommonLibrary.Lib.Compornent.SimpleTcpClient.Connect(String host, Int32 port, Int32 connectionTimeout, Int32 sendTimeout, Int32 receiveTimeout) 場所 C:\taira_work\RIS\Library\RISCommonLibrary\Lib\Compornent\SimpleTcpClient.cs:行 86
+   場所 ARISSend.Model.ReportDokueiInfoTcpClient.ConnectTcp(ISocketParameter socketParameter) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoTcpClient.cs:行 187
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.ConnectTcp() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 110
+   場所 ARISSend.Model.ReportDokueiInfoSender.ConnectTcp(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoSender.cs:行 58
+   場所 ARISSend.Model.ServiceLooper.ConnectTcpReceipt() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 164
+INFO  2019-07-23 10:10:39.161 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+INFO  2019-07-23 10:10:49.546 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を切断します
+INFO  2019-07-23 10:10:49.552 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 既読:切断します
+DEBUG 2019-07-23 10:10:49.561 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpします
+DEBUG 2019-07-23 10:10:49.569 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - ソケット切断します
+DEBUG 2019-07-23 10:10:49.575 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-23 10:10:49.581 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-23 10:10:49.587 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました。stream == null
+DEBUG 2019-07-23 10:10:49.592 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-23 10:10:49.598 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました。client == null
+DEBUG 2019-07-23 10:10:49.603 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+DEBUG 2019-07-23 10:10:49.609 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpしました
+INFO  2019-07-23 10:10:49.616 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を切断しました
+INFO  2019-07-23 10:10:50.002 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 10:10:54.907 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 既読:接続します
+DEBUG 2019-07-23 10:10:54.914 [1] ARISSend.Model.ReportDokueiInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.50, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-23 10:10:54.920 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-23 10:10:55.986 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-23 10:10:55.994 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-23 10:10:56.000 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました。stream == null
+DEBUG 2019-07-23 10:10:56.005 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-23 10:10:56.013 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました
+DEBUG 2019-07-23 10:10:56.019 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+ERROR 2019-07-23 10:10:56.081 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - 致命的なエラーが発生しました。
+ERROR 2019-07-23 10:10:56.087 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - System.Net.Sockets.SocketException (0x80004005): 対象のコンピューターによって拒否されたため、接続できませんでした。 192.168.100.50:16030
+   場所 System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   場所 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   場所 System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   場所 RISCommonLibrary.Lib.Compornent.SimpleTcpClient.Connect(String host, Int32 port, Int32 connectionTimeout, Int32 sendTimeout, Int32 receiveTimeout) 場所 C:\taira_work\RIS\Library\RISCommonLibrary\Lib\Compornent\SimpleTcpClient.cs:行 86
+   場所 ARISSend.Model.ReportDokueiInfoTcpClient.ConnectTcp(ISocketParameter socketParameter) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoTcpClient.cs:行 187
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.ConnectTcp() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 110
+   場所 ARISSend.Model.ReportDokueiInfoSender.ConnectTcp(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoSender.cs:行 58
+   場所 ARISSend.Model.ServiceLooper.ConnectTcpReceipt() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 164
+INFO  2019-07-23 10:10:56.094 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+INFO  2019-07-23 10:11:32.610 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を切断します
+INFO  2019-07-23 10:11:32.616 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 既読:切断します
+DEBUG 2019-07-23 10:11:32.623 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpします
+DEBUG 2019-07-23 10:11:32.629 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - ソケット切断します
+DEBUG 2019-07-23 10:11:32.635 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-23 10:11:32.640 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-23 10:11:32.646 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました。stream == null
+DEBUG 2019-07-23 10:11:32.651 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-23 10:11:32.656 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました。client == null
+DEBUG 2019-07-23 10:11:32.662 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+DEBUG 2019-07-23 10:11:32.667 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpしました
+INFO  2019-07-23 10:11:32.674 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を切断しました
+INFO  2019-07-23 10:11:33.162 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 10:11:38.220 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 既読:接続します
+DEBUG 2019-07-23 10:11:38.227 [1] ARISSend.Model.ReportDokueiInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.50, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-23 10:11:38.233 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-23 10:11:38.241 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectしました
+INFO  2019-07-23 10:11:38.251 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+DEBUG 2019-07-23 10:11:44.518 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - SELECT RI.ID, RI.REVISION FROM REPORTINFO RI LEFT JOIN REPORTDOKUEIINFO RD ON  RI.ID = RD.ID WHERE RI.CHECKFLG = '1' AND RD.ID IS NULL
+DEBUG 2019-07-23 10:11:44.564 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - リーダオブジェクトをログ出力します
+DEBUG 2019-07-23 10:11:44.580 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - Index:0, Name:ID, FieldType:System.String, IsDBNull:False, Value:000000000000000012
+DEBUG 2019-07-23 10:11:44.588 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - Index:1, Name:REVISION, FieldType:System.Int16, IsDBNull:False, Value:0
+INFO  2019-07-23 10:11:44.602 [1] ARISSend.Model.ReportDokueiInfoSender Send - IF処理開始します。RequestID=000000000000000012
+DEBUG 2019-07-23 10:11:44.608 [1] ARISSend.Model.ReportDokueiInfoSender Send - 古いログファイルを削除します
+DEBUG 2019-07-23 10:11:44.679 [1] ARISSend.Model.ReportDokueiInfoSender Send - 電文作成者を作成します
+INFO  2019-07-23 10:11:44.694 [1] ARISSend.Model.ReportDokueiInfoSender Send - 電文を作成します。種別=000000000000000012
+INFO  2019-07-23 10:11:46.762 [1] ARISSend.Model.MessageCreator.BaseMsgCreator CreateMsg - 既読情報を取得します
+DEBUG 2019-07-23 10:11:46.807 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDbCommandLogForLog4net - SELECT EI.ODRID odrid, EI.PATID patid, TO_CHAR(RI.CHECKDATE, 'YYYYMMDD') checkdate_yyyymmdd, TO_CHAR(RI.CHECKDATE, 'HH24MI') checkdate_hh24mi, UM.USERID userid FROM EXAMINFO EI JOIN REPORTINFO RI ON  EI.RPTID = RI.ID JOIN USERMANAGE UM ON  RI.CHECKDOCTOR = UM.USERID WHERE EI.RPTID = :rptid 
+DEBUG 2019-07-23 10:11:46.814 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDbCommandLogForLog4net - Index:0,Direction:Input,IsNullable:False,Name:rptid,Type:String,Value:000000000000000012
+DEBUG 2019-07-23 10:11:46.946 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - リーダオブジェクトをログ出力します
+DEBUG 2019-07-23 10:11:46.952 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:0, Name:ODRID, FieldType:System.String, IsDBNull:False, Value:5555555
+DEBUG 2019-07-23 10:11:46.958 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:1, Name:PATID, FieldType:System.String, IsDBNull:False, Value:0000000001
+DEBUG 2019-07-23 10:11:46.965 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:2, Name:CHECKDATE_YYYYMMDD, FieldType:System.String, IsDBNull:True, Value:
+DEBUG 2019-07-23 10:11:46.971 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:3, Name:CHECKDATE_HH24MI, FieldType:System.String, IsDBNull:True, Value:
+DEBUG 2019-07-23 10:11:46.979 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:4, Name:USERID, FieldType:System.String, IsDBNull:False, Value:YOKOGAWA
+INFO  2019-07-23 10:11:48.929 [1] ARISSend.Model.ReportDokueiInfoSender Send - 送信処理を行います
+DEBUG 2019-07-23 10:12:43.066 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット送信します
+INFO  2019-07-23 10:12:55.302 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット送信電文ログファイル名=20190723101245527_06_SEND.log
+INFO  2019-07-23 10:12:56.622 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendします
+INFO  2019-07-23 10:12:56.629 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendしました
+DEBUG 2019-07-23 10:12:57.982 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット受信します
+INFO  2019-07-23 10:12:59.175 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readします
+DEBUG 2019-07-23 10:12:59.182 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadStart
+DEBUG 2019-07-23 10:12:59.188 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadEnd=52バイト
+INFO  2019-07-23 10:12:59.313 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readしました
+INFO  2019-07-23 10:13:00.548 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット受信電文ログファイル名=20190723101245527_41_RECV.log
+DEBUG 2019-07-23 10:13:10.548 [1] ARISSend.Model.ReportDokueiInfoSender CheckResponseWithRetry - 電文受信結果=41
+INFO  2019-07-23 10:15:48.191 [1] ARISSend.Model.ReportDokueiInfoSender Send - データベース更新処理を行います
+DEBUG 2019-07-23 10:15:51.567 [1] ARISSend.Model.ReportDokueiInfoSender UpdateDBNormal - UpdateDB開始します
+DEBUG 2019-07-23 10:16:10.688 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - insert into reportdokueiinfo( ID, REVISION, TRANSFERDATE, TRANSFERTEXT ) values(:id, :revision, SYSDATE, :transfertext ) 
+DEBUG 2019-07-23 10:16:10.694 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - Index:0,Direction:Input,IsNullable:False,Name:id,Type:String,Value:000000000000000012
+DEBUG 2019-07-23 10:16:10.700 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - Index:1,Direction:Input,IsNullable:False,Name:revision,Type:String,Value:0
+DEBUG 2019-07-23 10:16:10.706 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - Index:2,Direction:Input,IsNullable:False,Name:transfertext,Type:String,Value:00
+DEBUG 2019-07-23 10:16:10.713 [1] ARISSend.Model.ReportDokueiInfoHelper UpdateToDB - REPORTDOKUEIINFOテーブルを更新します
+DEBUG 2019-07-23 10:16:10.773 [1] ARISSend.Model.ReportDokueiInfoHelper UpdateToDB - REPORTDOKUEIINFOテーブルを更新しました
+DEBUG 2019-07-23 10:16:10.780 [1] ARISSend.Model.ReportDokueiInfoSender UpdateDBNormal - UpdateDB終了しました
+INFO  2019-07-23 10:16:12.343 [1] ARISSend.Model.ReportDokueiInfoSender Send - IF処理終了します。RequestID=000000000000000012
+INFO  2019-07-23 10:45:41.392 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+ERROR 2019-07-23 10:45:43.826 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - 致命的なエラーが発生しました。
+ERROR 2019-07-23 10:45:43.832 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - System.Collections.Generic.KeyNotFoundException: 指定されたキーはディレクトリ内に存在しませんでした。
+   場所 System.ThrowHelper.ThrowKeyNotFoundException()
+   場所 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   場所 ARISSend.Model.ReportDokueiInfoSender.GetMessageCreator(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoSender.cs:行 303
+   場所 ARISSend.Model.ReportDokueiInfoSender.ConnectTcp(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoSender.cs:行 53
+   場所 ARISSend.Model.ServiceLooper.ConnectTcpReceipt() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 164
+INFO  2019-07-23 10:45:43.840 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+INFO  2019-07-23 10:46:01.761 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+ERROR 2019-07-23 10:46:10.031 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - 致命的なエラーが発生しました。
+ERROR 2019-07-23 10:46:10.039 [1] ARISSend.Model.ServiceLooper ConnectTcpReceipt - System.Collections.Generic.KeyNotFoundException: 指定されたキーはディレクトリ内に存在しませんでした。
+   場所 System.ThrowHelper.ThrowKeyNotFoundException()
+   場所 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   場所 ARISSend.Model.ReportDokueiInfoSender.GetMessageCreator(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoSender.cs:行 303
+   場所 ARISSend.Model.ReportDokueiInfoSender.ConnectTcp(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoSender.cs:行 53
+   場所 ARISSend.Model.ServiceLooper.ConnectTcpReceipt() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 164
+INFO  2019-07-23 10:46:10.046 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+INFO  2019-07-23 10:46:14.614 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を切断します
+ERROR 2019-07-23 10:46:14.664 [1] ARISSend.Model.ServiceLooper DisConnectTcpReceipt - 致命的なエラーが発生しました。
+ERROR 2019-07-23 10:46:14.670 [1] ARISSend.Model.ServiceLooper DisConnectTcpReceipt - System.Collections.Generic.KeyNotFoundException: 指定されたキーはディレクトリ内に存在しませんでした。
+   場所 System.ThrowHelper.ThrowKeyNotFoundException()
+   場所 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   場所 ARISSend.Model.ReportDokueiInfoSender.GetMessageCreator(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoSender.cs:行 303
+   場所 ARISSend.Model.ReportDokueiInfoSender.DisConnectTcp(String requestType) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoSender.cs:行 67
+   場所 ARISSend.Model.ServiceLooper.DisConnectTcpReceipt() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 178
+INFO  2019-07-23 10:46:14.678 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を切断しました
+INFO  2019-07-23 10:46:14.958 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 10:47:01.514 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 11:25:10.831 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 11:25:49.709 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 11:25:51.515 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 既読:接続します
+DEBUG 2019-07-23 11:25:51.523 [1] ARISSend.Model.ReportDokueiInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.50, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-23 11:25:51.531 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-23 11:25:51.545 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectしました
+INFO  2019-07-23 11:25:51.562 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+DEBUG 2019-07-23 11:25:58.563 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - SELECT RI.ID, RI.REVISION FROM REPORTINFO RI LEFT JOIN REPORTDOKUEIINFO RD ON  RI.ID = RD.ID WHERE RI.CHECKFLG = '1' AND RD.ID IS NULL
+DEBUG 2019-07-23 11:25:58.606 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - リーダオブジェクトをログ出力します
+DEBUG 2019-07-23 11:25:58.621 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - Index:0, Name:ID, FieldType:System.String, IsDBNull:False, Value:000000000000000013
+DEBUG 2019-07-23 11:25:58.627 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - Index:1, Name:REVISION, FieldType:System.Int16, IsDBNull:False, Value:-1
+INFO  2019-07-23 11:25:58.647 [1] ARISSend.Model.ReportDokueiInfoSender Send - IF処理開始します。RequestID=000000000000000013
+DEBUG 2019-07-23 11:25:58.654 [1] ARISSend.Model.ReportDokueiInfoSender Send - 古いログファイルを削除します
+DEBUG 2019-07-23 11:25:58.667 [1] ARISSend.Model.ReportDokueiInfoSender Send - 電文作成者を作成します
+INFO  2019-07-23 11:25:58.673 [1] ARISSend.Model.ReportDokueiInfoSender Send - 電文を作成します。種別=000000000000000013
+INFO  2019-07-23 11:26:01.370 [1] ARISSend.Model.MessageCreator.BaseMsgCreator CreateMsg - 既読情報を取得します
+DEBUG 2019-07-23 11:26:01.383 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDbCommandLogForLog4net - SELECT EI.ODRID odrid, EI.PATID patid, TO_CHAR(RI.CHECKDATE, 'YYYYMMDD') checkdate_yyyymmdd, TO_CHAR(RI.CHECKDATE, 'HH24MI') checkdate_hh24mi, UM.USERID userid FROM EXAMINFO EI JOIN REPORTINFO RI ON  EI.RPTID = RI.ID JOIN USERMANAGE UM ON  RI.CHECKDOCTOR = UM.USERID WHERE EI.RPTID = :rptid 
+DEBUG 2019-07-23 11:26:01.389 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDbCommandLogForLog4net - Index:0,Direction:Input,IsNullable:False,Name:rptid,Type:String,Value:000000000000000013
+DEBUG 2019-07-23 11:26:01.407 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - リーダオブジェクトをログ出力します
+DEBUG 2019-07-23 11:26:01.412 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:0, Name:ODRID, FieldType:System.String, IsDBNull:True, Value:
+DEBUG 2019-07-23 11:26:01.419 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:1, Name:PATID, FieldType:System.String, IsDBNull:False, Value:0000000001
+DEBUG 2019-07-23 11:26:01.425 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:2, Name:CHECKDATE_YYYYMMDD, FieldType:System.String, IsDBNull:True, Value:
+DEBUG 2019-07-23 11:26:01.432 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:3, Name:CHECKDATE_HH24MI, FieldType:System.String, IsDBNull:True, Value:
+DEBUG 2019-07-23 11:26:01.439 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:4, Name:USERID, FieldType:System.String, IsDBNull:False, Value:YOKOGAWA
+INFO  2019-07-23 11:26:04.400 [1] ARISSend.Model.ReportDokueiInfoSender Send - 送信処理を行います
+DEBUG 2019-07-23 11:26:07.890 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット送信します
+INFO  2019-07-23 11:26:07.899 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット送信電文ログファイル名=20190723112607897_06_SEND.log
+INFO  2019-07-23 11:26:07.911 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendします
+INFO  2019-07-23 11:26:07.918 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendしました
+DEBUG 2019-07-23 11:26:07.924 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット受信します
+INFO  2019-07-23 11:26:07.931 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readします
+DEBUG 2019-07-23 11:26:07.938 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadStart
+DEBUG 2019-07-23 11:26:07.945 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadEnd=52バイト
+INFO  2019-07-23 11:26:07.954 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readしました
+INFO  2019-07-23 11:26:09.511 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット受信電文ログファイル名=20190723112607897_41_RECV.log
+DEBUG 2019-07-23 11:26:11.130 [1] ARISSend.Model.ReportDokueiInfoSender CheckResponseWithRetry - 電文受信結果=41
+INFO  2019-07-23 11:26:11.138 [1] ARISSend.Model.ReportDokueiInfoSender Send - データベース更新処理を行います
+DEBUG 2019-07-23 11:26:12.259 [1] ARISSend.Model.ReportDokueiInfoSender UpdateDBNormal - UpdateDB開始します
+DEBUG 2019-07-23 11:26:15.261 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - insert into reportdokueiinfo( ID, REVISION, TRANSFERDATE, TRANSFERTEXT ) values(:id, :revision, SYSDATE, :transfertext ) 
+DEBUG 2019-07-23 11:26:15.267 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - Index:0,Direction:Input,IsNullable:False,Name:id,Type:String,Value:000000000000000013
+DEBUG 2019-07-23 11:26:15.274 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - Index:1,Direction:Input,IsNullable:False,Name:revision,Type:String,Value:-1
+DEBUG 2019-07-23 11:26:15.280 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - Index:2,Direction:Input,IsNullable:False,Name:transfertext,Type:String,Value:00
+DEBUG 2019-07-23 11:26:15.285 [1] ARISSend.Model.ReportDokueiInfoHelper UpdateToDB - REPORTDOKUEIINFOテーブルを更新します
+DEBUG 2019-07-23 11:26:15.301 [1] ARISSend.Model.ReportDokueiInfoHelper UpdateToDB - REPORTDOKUEIINFOテーブルを更新しました
+DEBUG 2019-07-23 11:26:15.308 [1] ARISSend.Model.ReportDokueiInfoSender UpdateDBNormal - UpdateDB終了しました
+INFO  2019-07-23 11:26:15.724 [1] ARISSend.Model.ReportDokueiInfoSender Send - IF処理終了します。RequestID=000000000000000013
+INFO  2019-07-23 11:35:56.608 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 11:35:58.364 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 既読:接続します
+DEBUG 2019-07-23 11:35:58.376 [1] ARISSend.Model.ReportDokueiInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.50, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-23 11:35:58.385 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-23 11:35:58.398 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectしました
+INFO  2019-07-23 11:36:01.158 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+DEBUG 2019-07-23 11:36:05.957 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - SELECT RI.ID, RI.REVISION FROM REPORTINFO RI LEFT JOIN REPORTDOKUEIINFO RD ON  RI.ID = RD.ID WHERE RI.CHECKFLG = '1' AND RD.ID IS NULL
+DEBUG 2019-07-23 11:36:33.534 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - SELECT RI.ID, RI.REVISION FROM REPORTINFO RI LEFT JOIN REPORTDOKUEIINFO RD ON  RI.ID = RD.ID WHERE RI.CHECKFLG = '1' AND RD.ID IS NULL
+DEBUG 2019-07-23 11:36:33.560 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - リーダオブジェクトをログ出力します
+DEBUG 2019-07-23 11:36:33.582 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - Index:0, Name:ID, FieldType:System.String, IsDBNull:False, Value:000000000000000001
+DEBUG 2019-07-23 11:36:33.589 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - Index:1, Name:REVISION, FieldType:System.Int16, IsDBNull:False, Value:0
+INFO  2019-07-23 11:36:33.597 [1] ARISSend.Model.ReportDokueiInfoSender Send - IF処理開始します。RequestID=000000000000000001
+DEBUG 2019-07-23 11:36:33.603 [1] ARISSend.Model.ReportDokueiInfoSender Send - 古いログファイルを削除します
+DEBUG 2019-07-23 11:36:33.623 [1] ARISSend.Model.ReportDokueiInfoSender Send - 電文作成者を作成します
+INFO  2019-07-23 11:36:33.628 [1] ARISSend.Model.ReportDokueiInfoSender Send - 電文を作成します。種別=000000000000000001
+INFO  2019-07-23 11:38:14.325 [1] ARISSend.Model.MessageCreator.BaseMsgCreator CreateMsg - 既読情報を取得します
+DEBUG 2019-07-23 11:38:14.339 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDbCommandLogForLog4net - SELECT EI.ODRID odrid, EI.PATID patid, TO_CHAR(RI.CHECKDATE, 'YYYYMMDD') checkdate_yyyymmdd, TO_CHAR(RI.CHECKDATE, 'HH24MI') checkdate_hh24mi, UM.USERID userid FROM EXAMINFO EI JOIN REPORTINFO RI ON  EI.RPTID = RI.ID JOIN USERMANAGE UM ON  RI.CHECKDOCTOR = UM.USERID WHERE EI.RPTID = :rptid 
+DEBUG 2019-07-23 11:38:14.345 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDbCommandLogForLog4net - Index:0,Direction:Input,IsNullable:False,Name:rptid,Type:String,Value:000000000000000001
+DEBUG 2019-07-23 11:38:14.363 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - リーダオブジェクトをログ出力します
+DEBUG 2019-07-23 11:38:14.370 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:0, Name:ODRID, FieldType:System.String, IsDBNull:False, Value:2
+DEBUG 2019-07-23 11:38:14.375 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:1, Name:PATID, FieldType:System.String, IsDBNull:False, Value:00REP00001
+DEBUG 2019-07-23 11:38:14.382 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:2, Name:CHECKDATE_YYYYMMDD, FieldType:System.String, IsDBNull:False, Value:20190719
+DEBUG 2019-07-23 11:38:14.388 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:3, Name:CHECKDATE_HH24MI, FieldType:System.String, IsDBNull:False, Value:0000
+DEBUG 2019-07-23 11:38:14.394 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:4, Name:USERID, FieldType:System.String, IsDBNull:False, Value:YOKOGAWA
+INFO  2019-07-23 11:38:31.076 [1] ARISSend.Model.ReportDokueiInfoSender Send - 送信処理を行います
+DEBUG 2019-07-23 11:38:36.836 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット送信します
+INFO  2019-07-23 11:38:36.850 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット送信電文ログファイル名=20190723113836845_06_SEND.log
+INFO  2019-07-23 11:38:36.863 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendします
+INFO  2019-07-23 11:38:36.869 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendしました
+DEBUG 2019-07-23 11:38:36.877 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット受信します
+INFO  2019-07-23 11:38:36.884 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readします
+DEBUG 2019-07-23 11:38:36.890 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadStart
+DEBUG 2019-07-23 11:38:36.900 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadEnd=52バイト
+INFO  2019-07-23 11:38:36.909 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readしました
+INFO  2019-07-23 11:38:39.331 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット受信電文ログファイル名=20190723113836845_41_RECV.log
+DEBUG 2019-07-23 11:38:39.996 [1] ARISSend.Model.ReportDokueiInfoSender CheckResponseWithRetry - 電文受信結果=41
+INFO  2019-07-23 11:38:40.003 [1] ARISSend.Model.ReportDokueiInfoSender Send - データベース更新処理を行います
+DEBUG 2019-07-23 11:38:40.604 [1] ARISSend.Model.ReportDokueiInfoSender UpdateDBNormal - UpdateDB開始します
+DEBUG 2019-07-23 11:38:43.366 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - insert into reportdokueiinfo( ID, REVISION, TRANSFERDATE, TRANSFERTEXT ) values(:id, :revision, SYSDATE, :transfertext ) 
+DEBUG 2019-07-23 11:38:43.373 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - Index:0,Direction:Input,IsNullable:False,Name:id,Type:String,Value:000000000000000001
+DEBUG 2019-07-23 11:38:43.380 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - Index:1,Direction:Input,IsNullable:False,Name:revision,Type:String,Value:0
+DEBUG 2019-07-23 11:38:43.388 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - Index:2,Direction:Input,IsNullable:False,Name:transfertext,Type:String,Value:00
+DEBUG 2019-07-23 11:38:43.395 [1] ARISSend.Model.ReportDokueiInfoHelper UpdateToDB - REPORTDOKUEIINFOテーブルを更新します
+DEBUG 2019-07-23 11:38:43.415 [1] ARISSend.Model.ReportDokueiInfoHelper UpdateToDB - REPORTDOKUEIINFOテーブルを更新しました
+DEBUG 2019-07-23 11:38:43.422 [1] ARISSend.Model.ReportDokueiInfoSender UpdateDBNormal - UpdateDB終了しました
+INFO  2019-07-23 11:38:44.140 [1] ARISSend.Model.ReportDokueiInfoSender Send - IF処理終了します。RequestID=000000000000000001
+DEBUG 2019-07-23 11:48:29.034 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDbCommandLogForLog4net - SELECT RI.ID, RI.REVISION FROM REPORTINFO RI LEFT JOIN REPORTDOKUEIINFO RD ON  RI.ID = RD.ID WHERE RI.CHECKFLG = '1' AND RD.ID IS NULL
+DEBUG 2019-07-23 11:48:29.052 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - リーダオブジェクトをログ出力します
+DEBUG 2019-07-23 11:48:29.058 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - Index:0, Name:ID, FieldType:System.String, IsDBNull:False, Value:000000000000000006
+DEBUG 2019-07-23 11:48:29.064 [1] ARISSend.Model.ReportDokueiInfoHelper WriteDataReaderLogForLog4net - Index:1, Name:REVISION, FieldType:System.Int16, IsDBNull:False, Value:-1
+INFO  2019-07-23 11:48:29.070 [1] ARISSend.Model.ReportDokueiInfoSender Send - IF処理開始します。RequestID=000000000000000006
+DEBUG 2019-07-23 11:48:29.076 [1] ARISSend.Model.ReportDokueiInfoSender Send - 古いログファイルを削除します
+DEBUG 2019-07-23 11:48:29.083 [1] ARISSend.Model.ReportDokueiInfoSender Send - 電文作成者を作成します
+INFO  2019-07-23 11:48:29.088 [1] ARISSend.Model.ReportDokueiInfoSender Send - 電文を作成します。種別=000000000000000006
+INFO  2019-07-23 11:48:29.789 [1] ARISSend.Model.MessageCreator.BaseMsgCreator CreateMsg - 既読情報を取得します
+DEBUG 2019-07-23 11:48:29.796 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDbCommandLogForLog4net - SELECT EI.ODRID odrid, EI.PATID patid, TO_CHAR(RI.CHECKDATE, 'YYYYMMDD') checkdate_yyyymmdd, TO_CHAR(RI.CHECKDATE, 'HH24MI') checkdate_hh24mi, UM.USERID userid FROM EXAMINFO EI JOIN REPORTINFO RI ON  EI.RPTID = RI.ID JOIN USERMANAGE UM ON  RI.CHECKDOCTOR = UM.USERID WHERE EI.RPTID = :rptid 
+DEBUG 2019-07-23 11:48:29.802 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDbCommandLogForLog4net - Index:0,Direction:Input,IsNullable:False,Name:rptid,Type:String,Value:000000000000000006
+DEBUG 2019-07-23 11:48:29.811 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - リーダオブジェクトをログ出力します
+DEBUG 2019-07-23 11:48:29.816 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:0, Name:ODRID, FieldType:System.String, IsDBNull:True, Value:
+DEBUG 2019-07-23 11:48:29.822 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:1, Name:PATID, FieldType:System.String, IsDBNull:False, Value:0000000001
+DEBUG 2019-07-23 11:48:29.828 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:2, Name:CHECKDATE_YYYYMMDD, FieldType:System.String, IsDBNull:True, Value:
+DEBUG 2019-07-23 11:48:29.834 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:3, Name:CHECKDATE_HH24MI, FieldType:System.String, IsDBNull:True, Value:
+DEBUG 2019-07-23 11:48:29.840 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:4, Name:USERID, FieldType:System.String, IsDBNull:False, Value:YOKOGAWA
+INFO  2019-07-23 11:48:30.424 [1] ARISSend.Model.ReportDokueiInfoSender Send - 送信処理を行います
+DEBUG 2019-07-23 11:48:31.717 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット送信します
+INFO  2019-07-23 11:48:31.724 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット送信電文ログファイル名=20190723114831724_06_SEND.log
+INFO  2019-07-23 11:48:31.737 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendします
+INFO  2019-07-23 11:48:31.743 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendしました
+DEBUG 2019-07-23 11:48:31.750 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット受信します
+INFO  2019-07-23 11:48:31.756 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readします
+DEBUG 2019-07-23 11:48:31.763 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadStart
+DEBUG 2019-07-23 11:48:31.769 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadEnd=52バイト
+INFO  2019-07-23 11:48:31.775 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readしました
+INFO  2019-07-23 11:48:32.271 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット受信電文ログファイル名=20190723114831724_41_RECV.log
+DEBUG 2019-07-23 11:48:33.146 [1] ARISSend.Model.ReportDokueiInfoSender CheckResponseWithRetry - 電文受信結果=41
+INFO  2019-07-23 11:48:33.153 [1] ARISSend.Model.ReportDokueiInfoSender Send - データベース更新処理を行います
+DEBUG 2019-07-23 11:48:33.765 [1] ARISSend.Model.ReportDokueiInfoSender UpdateDBNormal - UpdateDB開始します
+INFO  2019-07-23 11:50:07.216 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 11:50:09.720 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 既読:接続します
+DEBUG 2019-07-23 11:50:09.733 [1] ARISSend.Model.ReportDokueiInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.50, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-23 11:50:09.742 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-23 11:50:09.758 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectしました
+INFO  2019-07-23 11:50:18.894 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+ERROR 2019-07-23 11:51:06.005 [1] ARISSend.Program Application_ThreadException - 未補足の例外が発生しました。System.ArgumentNullException: 値を Null にすることはできません。
+パラメーター名:source
+   場所 System.Linq.GroupedEnumerable`3..ctor(IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   場所 System.Linq.Enumerable.GroupBy[TSource,TKey](IEnumerable`1 source, Func`2 keySelector)
+   場所 ARISSend.Model.ReportDokueiInfoSender.Dispose() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ReportDokueiInfoSender.cs:行 473
+   場所 ARISSend.Model.ServiceLooper.Dispose() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ServiceLooper.cs:行 332
+   場所 ARISSend.ARISSendForm.ArisSendForm_FormClosed(Object sender, FormClosedEventArgs e) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\ARISSendForm.cs:行 111
+   場所 System.Windows.Forms.Form.OnFormClosed(FormClosedEventArgs e)
+   場所 System.Windows.Forms.Form.WmClose(Message& m)
+   場所 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+INFO  2019-07-23 13:14:47.339 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 13:14:48.620 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 既読:接続します
+DEBUG 2019-07-23 13:14:48.630 [1] ARISSend.Model.ReportDokueiInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.50, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-23 13:14:48.637 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-23 13:14:48.652 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectしました
+INFO  2019-07-23 13:14:49.129 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+DEBUG 2019-07-23 13:14:56.455 [1] ARISSend.Model.MessageCreator.BaseMsgCreator RequestClose - 既読:回線切断要求を送信します
+DEBUG 2019-07-23 13:14:59.469 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット送信します
+INFO  2019-07-23 13:14:59.478 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット送信電文ログファイル名=20190723131459476_09_SEND.log
+INFO  2019-07-23 13:14:59.492 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendします
+INFO  2019-07-23 13:14:59.498 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendしました
+DEBUG 2019-07-23 13:14:59.508 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット受信します
+INFO  2019-07-23 13:14:59.515 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readします
+DEBUG 2019-07-23 13:14:59.526 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadStart
+DEBUG 2019-07-23 13:14:59.535 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadEnd=52バイト
+INFO  2019-07-23 13:14:59.545 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readしました
+INFO  2019-07-23 13:15:00.741 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット受信電文ログファイル名=20190723131459476_41_RECV.log
+INFO  2019-07-23 13:15:00.759 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 既読:切断します
+DEBUG 2019-07-23 13:15:00.765 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpします
+DEBUG 2019-07-23 13:15:00.773 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - ソケット切断します
+DEBUG 2019-07-23 13:15:00.781 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-23 13:15:00.899 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-23 13:15:00.912 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました
+DEBUG 2019-07-23 13:15:00.926 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-23 13:15:00.936 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました
+DEBUG 2019-07-23 13:15:00.941 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+DEBUG 2019-07-23 13:15:00.949 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpしました
+INFO  2019-07-23 13:17:19.952 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始します
+INFO  2019-07-23 13:17:21.952 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 既読:接続します
+DEBUG 2019-07-23 13:17:21.964 [1] ARISSend.Model.ReportDokueiInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.50, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-23 13:17:21.970 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-23 13:17:21.985 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectしました
+INFO  2019-07-23 13:17:23.088 [1] ARISSend.ARISSendForm receiptConnectTcpCheckBox_CheckedChanged - 既読ソケット接続を開始しました
+DEBUG 2019-07-23 13:31:27.346 [1] ARISSend.Model.MessageCreator.BaseMsgCreator RequestClose - 既読:回線切断要求を送信します
+DEBUG 2019-07-23 13:31:32.110 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット送信します
+INFO  2019-07-23 13:31:32.120 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット送信電文ログファイル名=20190723133132116_09_SEND.log
+INFO  2019-07-23 13:31:32.132 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendします
+INFO  2019-07-23 13:31:32.138 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendしました
+DEBUG 2019-07-23 13:31:32.144 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット受信します
+INFO  2019-07-23 13:31:32.153 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readします
+DEBUG 2019-07-23 13:31:32.158 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadStart
+DEBUG 2019-07-23 13:31:32.167 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadEnd=52バイト
+INFO  2019-07-23 13:31:32.175 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readしました
+INFO  2019-07-23 13:31:33.598 [1] ARISSend.Model.ReportDokueiInfoTcpClient SendRecv - ソケット受信電文ログファイル名=20190723133132116_41_RECV.log
+INFO  2019-07-23 13:31:33.616 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 既読:切断します
+DEBUG 2019-07-23 13:31:33.622 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpします
+DEBUG 2019-07-23 13:31:33.627 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - ソケット切断します
+DEBUG 2019-07-23 13:31:33.635 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-23 13:31:33.644 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-23 13:31:33.654 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました
+DEBUG 2019-07-23 13:31:33.662 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-23 13:31:33.668 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました
+DEBUG 2019-07-23 13:31:33.674 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+DEBUG 2019-07-23 13:31:33.684 [1] ARISSend.Model.ReportDokueiInfoTcpClient DisConnectTcp - DisConnectTcpしました

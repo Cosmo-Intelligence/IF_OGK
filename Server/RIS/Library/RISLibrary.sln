@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RISCommonLibrary", "RISCommonLibrary\RISCommonLibrary.csproj", "{35168D47-191A-4BF8-9E9A-36C815B9CB5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RISBizLibrary", "RISBizLibrary\RISBizLibrary.csproj", "{77DA6E5E-441A-449A-9E7E-6614F5D38700}"
+	ProjectSection(ProjectDependencies) = postProject
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D} = {35168D47-191A-4BF8-9E9A-36C815B9CB5D}
+		{B3298257-DDEF-45DA-B305-54F702704927} = {B3298257-DDEF-45DA-B305-54F702704927}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RISODPLibrary", "RISODPLibrary\RISODPLibrary.csproj", "{B3298257-DDEF-45DA-B305-54F702704927}"
+	ProjectSection(ProjectDependencies) = postProject
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D} = {35168D47-191A-4BF8-9E9A-36C815B9CB5D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D}.Debug|x64.ActiveCfg = Debug|x64
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D}.Debug|x64.Build.0 = Debug|x64
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D}.Debug|x86.ActiveCfg = Debug|x86
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D}.Debug|x86.Build.0 = Debug|x86
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D}.Release|Any CPU.ActiveCfg = Release|x86
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D}.Release|Any CPU.Build.0 = Release|x86
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D}.Release|x64.ActiveCfg = Release|x64
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D}.Release|x64.Build.0 = Release|x64
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D}.Release|x86.ActiveCfg = Release|x64
+		{35168D47-191A-4BF8-9E9A-36C815B9CB5D}.Release|x86.Build.0 = Release|x64
+		{77DA6E5E-441A-449A-9E7E-6614F5D38700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77DA6E5E-441A-449A-9E7E-6614F5D38700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77DA6E5E-441A-449A-9E7E-6614F5D38700}.Debug|x64.ActiveCfg = Debug|x64
+		{77DA6E5E-441A-449A-9E7E-6614F5D38700}.Debug|x64.Build.0 = Debug|x64
+		{77DA6E5E-441A-449A-9E7E-6614F5D38700}.Debug|x86.ActiveCfg = Debug|x86
+		{77DA6E5E-441A-449A-9E7E-6614F5D38700}.Debug|x86.Build.0 = Debug|x86
+		{77DA6E5E-441A-449A-9E7E-6614F5D38700}.Release|Any CPU.ActiveCfg = Release|x86
+		{77DA6E5E-441A-449A-9E7E-6614F5D38700}.Release|Any CPU.Build.0 = Release|x86
+		{77DA6E5E-441A-449A-9E7E-6614F5D38700}.Release|x64.ActiveCfg = Release|x64
+		{77DA6E5E-441A-449A-9E7E-6614F5D38700}.Release|x64.Build.0 = Release|x64
+		{77DA6E5E-441A-449A-9E7E-6614F5D38700}.Release|x86.ActiveCfg = Release|x86
+		{77DA6E5E-441A-449A-9E7E-6614F5D38700}.Release|x86.Build.0 = Release|x86
+		{B3298257-DDEF-45DA-B305-54F702704927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3298257-DDEF-45DA-B305-54F702704927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3298257-DDEF-45DA-B305-54F702704927}.Debug|x64.ActiveCfg = Debug|x64
+		{B3298257-DDEF-45DA-B305-54F702704927}.Debug|x64.Build.0 = Debug|x64
+		{B3298257-DDEF-45DA-B305-54F702704927}.Debug|x86.ActiveCfg = Debug|x86
+		{B3298257-DDEF-45DA-B305-54F702704927}.Debug|x86.Build.0 = Debug|x86
+		{B3298257-DDEF-45DA-B305-54F702704927}.Release|Any CPU.ActiveCfg = Release|x86
+		{B3298257-DDEF-45DA-B305-54F702704927}.Release|Any CPU.Build.0 = Release|x86
+		{B3298257-DDEF-45DA-B305-54F702704927}.Release|x64.ActiveCfg = Release|x64
+		{B3298257-DDEF-45DA-B305-54F702704927}.Release|x64.Build.0 = Release|x64
+		{B3298257-DDEF-45DA-B305-54F702704927}.Release|x86.ActiveCfg = Release|x86
+		{B3298257-DDEF-45DA-B305-54F702704927}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {799115D9-ECB1-4BD9-B12C-741C354B5DAA}
+	EndGlobalSection
+EndGlobal

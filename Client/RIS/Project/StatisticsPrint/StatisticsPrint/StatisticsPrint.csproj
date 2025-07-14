@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5539331A-13FC-4623-82AD-241521BE0FEC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StatisticsPrint</RootNamespace>
+    <AssemblyName>StatisticsPrint</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>printer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\app\yokogawa\product\11.2.0\client_2\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\StatisticsController.cs" />
+    <Compile Include="Data\ConditionPrint.cs" />
+    <Compile Include="Data\ConditionPrintPlace.cs" />
+    <Compile Include="Data\PlaceData.cs" />
+    <Compile Include="Data\ConditionPrintGeppo.cs" />
+    <Compile Include="Model\FormHelper\ConditionGeppoFormHelper.cs" />
+    <Compile Include="Model\COReports\COReportsDocument.cs" />
+    <Compile Include="Model\COReports\COReportsException.cs" />
+    <Compile Include="Model\COReports\COReportsExecBase.cs" />
+    <Compile Include="Model\COReports\COReportsHelper.cs" />
+    <Compile Include="Model\COReports\COReportsPrintout.cs" />
+    <Compile Include="Model\COReports\COReportsUtils.cs" />
+    <Compile Include="Model\Print\BuiBunrui\Data\BuiBunruiItemKensaType.cs" />
+    <Compile Include="Model\Print\BuiBunrui\BuiBunruiWriter.cs" />
+    <Compile Include="Model\Print\BuiBunrui\Data\BuiBunruiItem.cs" />
+    <Compile Include="Model\Print\Bui\Data\All\BuiItemPlaceAll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Print\Bui\Data\All\BuiPrintExecutorAll.cs" />
+    <Compile Include="Model\Print\Bui\Data\All\TotalFieldNameAll.cs" />
+    <Compile Include="Model\Print\Bui\Data\BuiItemBui.cs" />
+    <Compile Include="Model\Print\Bui\Data\BuiItemKensaType.cs" />
+    <Compile Include="Model\Print\Bui\Data\BuiItem.cs" />
+    <Compile Include="Model\Print\Bui\BuiPrint.cs" />
+    <Compile Include="Model\Print\Bui\BuiWriter.cs" />
+    <Compile Include="Model\Print\Bui\Data\BuiItemExamRoom.cs" />
+    <Compile Include="Model\Print\Bui\Data\BuiItemList.cs" />
+    <Compile Include="Model\Print\Bui\Data\All\BuiWriterAll.cs" />
+    <Compile Include="Model\Print\Bui\Data\IBuiItemChild.cs" />
+    <Compile Include="Model\Print\Bui\Data\TotalFieldName.cs" />
+    <Compile Include="Model\Print\Bui\BuiPrintExecutor.cs" />
+    <Compile Include="Model\Print\Common\Data\DetailDayItem.cs" />
+    <Compile Include="Model\Print\Common\Data\HasDetailDayListImpl.cs" />
+    <Compile Include="Model\Print\Common\Data\IHasDetailDayList.cs" />
+    <Compile Include="Model\Print\Common\IPrintWriter.cs" />
+    <Compile Include="Model\Print\Common\PrintBase.cs" />
+    <Compile Include="Model\Print\BuiBunrui\BuiBunruiPrint.cs" />
+    <Compile Include="Model\FormHelper\ConditionFormHelper.cs" />
+    <Compile Include="Model\FormHelper\ConditionPlaceFormHelper.cs" />
+    <Compile Include="Model\Print\Common\PrintWriterBase.cs" />
+    <Compile Include="Model\Print\BuiBunrui\Data\BuiBunruiItemBuiBunrui.cs" />
+    <Compile Include="Model\Print\CT\CTPrint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Print\CT\CTWriterPart.cs" />
+    <Compile Include="Model\Print\CT\CTWriterPartIppan.cs" />
+    <Compile Include="Model\Print\CT\CTWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Print\CT\CTWriterPartTokushu.cs" />
+    <Compile Include="Model\Print\CT\CTWriterPartSonota.cs" />
+    <Compile Include="Model\Print\CT\Data\CTItemPlace.cs" />
+    <Compile Include="Model\Print\CT\Data\CTItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Print\CT\Data\CTItemKubun.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Print\CT\Data\CTItemBunrui.cs" />
+    <Compile Include="Model\Print\DR\Data\DRItem.cs" />
+    <Compile Include="Model\Print\DR\Data\DRItemDR.cs" />
+    <Compile Include="Model\Print\DR\DRPrint.cs" />
+    <Compile Include="Model\Print\DR\DRWriter.cs" />
+    <Compile Include="Model\Print\Film\FilmPrint.cs" />
+    <Compile Include="Model\Print\Film\FilmWriter.cs" />
+    <Compile Include="Model\Print\Film\Data\FilmItem.cs" />
+    <Compile Include="Model\Print\Film\Data\FilmItemFilm.cs" />
+    <Compile Include="Model\Print\Geppo\GeppoDefine.cs" />
+    <Compile Include="Model\Print\Geppo\GeppoPrintDataSetter.cs" />
+    <Compile Include="Model\Print\Geppo\GeppoSTATISTICS_MONTHLY_DATAHelper.cs" />
+    <Compile Include="Model\Print\Geppo\IGeppoPrintDataSetter.cs" />
+    <Compile Include="Model\Print\Geppo\GeppoPrintDataSetterPrev.cs" />
+    <Compile Include="Model\Print\Geppo\GeppoWriterPartBunrui.cs" />
+    <Compile Include="Model\Print\Ippan\Data\IppanItem.cs" />
+    <Compile Include="Model\Print\Ippan\Data\IppanItemIppan.cs" />
+    <Compile Include="Model\Print\Ippan\IppanPrint.cs" />
+    <Compile Include="Model\Print\Ippan\IppanWriter.cs" />
+    <Compile Include="Model\Print\RI\Data\RIItem.cs" />
+    <Compile Include="Model\Print\RI\Data\RIItemRI.cs" />
+    <Compile Include="Model\Print\RI\RIPrint.cs" />
+    <Compile Include="Model\Print\RI\RIWriter.cs" />
+    <Compile Include="Model\Print\US\USWriterItem.cs" />
+    <Compile Include="Model\Print\US\USWriterPartUSTotal.cs" />
+    <Compile Include="Model\Print\US\USWriterPartExternal.cs" />
+    <Compile Include="Model\Print\US\USWriterPartZoueizai.cs" />
+    <Compile Include="Model\Print\Zoueizai\Data\ZoueizaiItem.cs" />
+    <Compile Include="Model\Print\Zoueizai\Data\ZoueizaiItemZoueizai.cs" />
+    <Compile Include="Model\Print\Zoueizai\ZoueizaiPrint.cs" />
+    <Compile Include="Model\Print\Zoueizai\ZoueizaiWriter.cs" />
+    <Compile Include="Model\Print\Emergency\EmergencyPrint.cs" />
+    <Compile Include="Model\Print\Emergency\EmergencyWriter.cs" />
+    <Compile Include="Model\Print\Emergency\Data\EmergencyItem.cs" />
+    <Compile Include="Model\Print\Emergency\Data\EmergencyItemEmergency.cs" />
+    <Compile Include="Model\Print\US\USPrint.cs" />
+    <Compile Include="Model\Print\US\USWriter.cs" />
+    <Compile Include="Model\Print\US\USWriterPart.cs" />
+    <Compile Include="Model\Print\US\USWriterPartMain.cs" />
+    <Compile Include="Model\Print\US\Data\USItem.cs" />
+    <Compile Include="Model\Print\US\Data\USItemBunrui.cs" />
+    <Compile Include="Model\Print\US\Data\USItemKubun.cs" />
+    <Compile Include="Model\Print\Geppo\Data\GeppoItem.cs" />
+    <Compile Include="Model\Print\Geppo\Data\GeppoItemBunrui.cs" />
+    <Compile Include="Model\Print\Geppo\Data\GeppoItemKubun.cs" />
+    <Compile Include="Model\Print\Geppo\GeppoPrint.cs" />
+    <Compile Include="Model\Print\Geppo\GeppoWriter.cs" />
+    <Compile Include="Model\Print\Geppo\GeppoWriterItem.cs" />
+    <Compile Include="Model\Print\Geppo\GeppoWriterPart.cs" />
+    <Compile Include="Model\Print\Geppo\GeppoWriterPartKubun.cs" />
+    <Compile Include="Model\Print\CDFilm\Data\CDFilmItem.cs" />
+    <Compile Include="Model\Print\CDFilm\Data\CDFilmItemCDFilm.cs" />
+    <Compile Include="Model\Print\CDFilm\CDFilmPrint.cs" />
+    <Compile Include="Model\Print\CDFilm\CDFilmWriter.cs" />
+    <Compile Include="View\conditionPlaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\conditionPlaceForm.Designer.cs">
+      <DependentUpon>conditionPlaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\conditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\conditionForm.Designer.cs">
+      <DependentUpon>conditionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\conditionGeppoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\conditionGeppoForm.Designer.cs">
+      <DependentUpon>conditionGeppoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\dataInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\dataInputForm.Designer.cs">
+      <DependentUpon>dataInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\menuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\menuForm.Designer.cs">
+      <DependentUpon>menuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\conditionPlaceForm.resx">
+      <DependentUpon>conditionPlaceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\conditionForm.resx">
+      <DependentUpon>conditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\conditionGeppoForm.resx">
+      <DependentUpon>conditionGeppoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\dataInputForm.resx">
+      <DependentUpon>dataInputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\menuForm.resx">
+      <DependentUpon>menuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\STATISTICS_BUI.crf" />
+    <None Include="Reports\STATISTICS_BUIBUNRUI.crf" />
+    <None Include="Reports\STATISTICS_CDFILM.crf" />
+    <None Include="Reports\STATISTICS_ZOUEIZAI.crf" />
+    <None Include="Reports\STATISTICS_CT.crf" />
+    <None Include="Reports\STATISTICS_EMERGENCY.crf" />
+    <None Include="Reports\STATISTICS_FILM.crf" />
+    <None Include="Reports\STATISTICS_DR.crf" />
+    <None Include="Reports\STATISTICS_GEPPO.crf" />
+    <None Include="Reports\STATISTICS_RI.crf" />
+    <None Include="Reports\STATISTICS_IPPAN.crf" />
+    <None Include="Reports\STATISTICS_US.crf" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="printer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CoReports">
+      <Guid>{A37A80A5-3F34-11D2-912B-00C0DF49BE5E}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="CoReportsCore">
+      <Guid>{F16397D8-CEDD-11D3-BE38-0090FE014382}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Server\RIS\Library\RISCommonLibrary\RISCommonLibrary.csproj">
+      <Project>{35168D47-191A-4BF8-9E9A-36C815B9CB5D}</Project>
+      <Name>RISCommonLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Server\RIS\Library\RISODPLibrary\RISODPLibrary.csproj">
+      <Project>{B3298257-DDEF-45DA-B305-54F702704927}</Project>
+      <Name>RISODPLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

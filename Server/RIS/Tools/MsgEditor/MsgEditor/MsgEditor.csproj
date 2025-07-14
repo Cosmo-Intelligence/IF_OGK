@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0F9AF78-E184-4320-AF85-2BE07563912B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MsgEditor</RootNamespace>
+    <AssemblyName>MsgEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Edit file.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Exceptions\MsgException.cs">
+      <Link>Exceptions\MsgException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Exceptions\RISIfException.cs">
+      <Link>Exceptions\RISIfException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\AggregateNode.cs">
+      <Link>Msg\AggregateNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\ArrayNode.cs">
+      <Link>Msg\ArrayNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\BaseMsg.cs">
+      <Link>Msg\BaseMsg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\BaseNode.cs">
+      <Link>Msg\BaseNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\BaseRootNode.cs">
+      <Link>Msg\BaseRootNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\CollectionNode.cs">
+      <Link>Msg\CollectionNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\CommonRootNode.cs">
+      <Link>Msg\Common\CommonRootNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\CommunicationControl\CommunicationControlAggregate.cs">
+      <Link>Msg\Common\CommunicationControl\CommunicationControlAggregate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\CommunicationControl\CommunicationControlNodeInfo.cs">
+      <Link>Msg\Common\CommunicationControl\CommunicationControlNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\CommunicationControl\ICommunicationControl.cs">
+      <Link>Msg\Common\CommunicationControl\ICommunicationControl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Exam\Detail\ExamDetailAggregate.cs">
+      <Link>Msg\Common\Exam\Detail\ExamDetailAggregate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Exam\Detail\ExamDetailDynamicArray.cs">
+      <Link>Msg\Common\Exam\Detail\ExamDetailDynamicArray.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Exam\ExamAggregate.cs">
+      <Link>Msg\Common\Exam\ExamAggregate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Exam\ExamNodeInfo.cs">
+      <Link>Msg\Common\Exam\ExamNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Exam\IExam.cs">
+      <Link>Msg\Common\Exam\IExam.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\IArrayNode.cs">
+      <Link>Msg\Common\IArrayNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\MsgUtils.cs">
+      <Link>Msg\Common\MsgUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Order\Detail\OrderDetailAggregate.cs">
+      <Link>Msg\Common\Order\Detail\OrderDetailAggregate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Order\Detail\OrderDetailArray.cs">
+      <Link>Msg\Common\Order\Detail\OrderDetailArray.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Order\Detail\OrderDetailArrayHelper.cs">
+      <Link>Msg\Common\Order\Detail\OrderDetailArrayHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Order\Detail\OrderDetailArrayHelperItem.cs">
+      <Link>Msg\Common\Order\Detail\OrderDetailArrayHelperItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Order\IOrder.cs">
+      <Link>Msg\Common\Order\IOrder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Order\OrderAggregate.cs">
+      <Link>Msg\Common\Order\OrderAggregate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Order\OrderNodeInfo.cs">
+      <Link>Msg\Common\Order\OrderNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\PatientAttribute\IPatientAttribute.cs">
+      <Link>Msg\Common\PatientAttribute\IPatientAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\PatientAttribute\PatientAttributeAggregate.cs">
+      <Link>Msg\Common\PatientAttribute\PatientAttributeAggregate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\PatientAttribute\PatientAttributeNodeInfo.cs">
+      <Link>Msg\Common\PatientAttribute\PatientAttributeNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\PatientAttribute\Result\PatientResultAllergy.cs">
+      <Link>Msg\Common\PatientAttribute\Result\PatientResultAllergy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\PatientAttribute\Result\PatientResultBlood.cs">
+      <Link>Msg\Common\PatientAttribute\Result\PatientResultBlood.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\PatientAttribute\Result\PatientResultExamData.cs">
+      <Link>Msg\Common\PatientAttribute\Result\PatientResultExamData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\PatientAttribute\Result\PatientResultHelper.cs">
+      <Link>Msg\Common\PatientAttribute\Result\PatientResultHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\PatientAttribute\Result\PatientResultInfection.cs">
+      <Link>Msg\Common\PatientAttribute\Result\PatientResultInfection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\PatientAttribute\Result\PatientResultItemBase.cs">
+      <Link>Msg\Common\PatientAttribute\Result\PatientResultItemBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Receipt\IReceipt.cs">
+      <Link>Msg\Common\Receipt\IReceipt.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Receipt\ReceiptAggregate.cs">
+      <Link>Msg\Common\Receipt\ReceiptAggregate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\Receipt\ReceiptNodeInfo.cs">
+      <Link>Msg\Common\Receipt\ReceiptNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Common\SumiAccelConst.cs">
+      <Link>Msg\Common\SumiAccelConst.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\ConnectionClose\ConnectionCloseMsg.cs">
+      <Link>Msg\ConnectionClose\ConnectionCloseMsg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\ConnectionClose\ConnectionCloseNodeInfo.cs">
+      <Link>Msg\ConnectionClose\ConnectionCloseNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\ConnectionClose\ConnectionCloseRoot.cs">
+      <Link>Msg\ConnectionClose\ConnectionCloseRoot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\ConnectionOpen\ConnectionOpenMsg.cs">
+      <Link>Msg\ConnectionOpen\ConnectionOpenMsg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\ConnectionOpen\ConnectionOpenNodeInfo.cs">
+      <Link>Msg\ConnectionOpen\ConnectionOpenNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\ConnectionOpen\ConnectionOpenRoot.cs">
+      <Link>Msg\ConnectionOpen\ConnectionOpenRoot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\DataNode.cs">
+      <Link>Msg\DataNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\DataNodeFormat.cs">
+      <Link>Msg\DataNodeFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\DynamicArrayNode.cs">
+      <Link>Msg\DynamicArrayNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Exam\ExamMsg.cs">
+      <Link>Msg\Exam\ExamMsg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Exam\ExamRoot.cs">
+      <Link>Msg\Exam\ExamRoot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Exam\ExamRootNodeInfo.cs">
+      <Link>Msg\Exam\ExamRootNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\FixedArrayNode.cs">
+      <Link>Msg\FixedArrayNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Hospitalize\HospitalizeMsg.cs">
+      <Link>Msg\Hospitalize\HospitalizeMsg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Hospitalize\HospitalizeNodeInfo.cs">
+      <Link>Msg\Hospitalize\HospitalizeNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Hospitalize\HospitalizeRoot.cs">
+      <Link>Msg\Hospitalize\HospitalizeRoot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\MsgCommonInfo.cs">
+      <Link>Msg\MsgCommonInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\MsgConst.cs">
+      <Link>Msg\MsgConst.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\MsgFactory.cs">
+      <Link>Msg\MsgFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\MsgFormat.cs">
+      <Link>Msg\MsgFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\NodeFactory.cs">
+      <Link>Msg\NodeFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\NodeInfo.cs">
+      <Link>Msg\NodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Order\OrderMsg.cs">
+      <Link>Msg\Order\OrderMsg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Order\OrderRoot.cs">
+      <Link>Msg\Order\OrderRoot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Order\OrderRootNodeInfo.cs">
+      <Link>Msg\Order\OrderRootNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Receipt\ReceiptMsg.cs">
+      <Link>Msg\Receipt\ReceiptMsg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Receipt\ReceiptRoot.cs">
+      <Link>Msg\Receipt\ReceiptRoot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Receipt\ReceiptRootNodeInfo.cs">
+      <Link>Msg\Receipt\ReceiptRootNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\RegistMsgToFactory.cs">
+      <Link>Msg\RegistMsgToFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\RequestPatient\RequestPatientMsg.cs">
+      <Link>Msg\RequestPatient\RequestPatientMsg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\RequestPatient\RequestPatientRoot.cs">
+      <Link>Msg\RequestPatient\RequestPatientRoot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\RequestPatient\RequestPatientRootNodeInfo.cs">
+      <Link>Msg\RequestPatient\RequestPatientRootNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\ResponseWithPatient\ResponseWithPatientMsg.cs">
+      <Link>Msg\ResponseWithPatient\ResponseWithPatientMsg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\ResponseWithPatient\ResponseWithPatientRoot.cs">
+      <Link>Msg\ResponseWithPatient\ResponseWithPatientRoot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\ResponseWithPatient\ResponseWithPatientRootNodeInfo.cs">
+      <Link>Msg\ResponseWithPatient\ResponseWithPatientRootNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Response\BaseResponseMsg.cs">
+      <Link>Msg\Response\BaseResponseMsg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Response\ResponseMsg.cs">
+      <Link>Msg\Response\ResponseMsg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Response\ResponseRoot.cs">
+      <Link>Msg\Response\ResponseRoot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\Response\ResponseRootNodeInfo.cs">
+      <Link>Msg\Response\ResponseRootNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Msg\StringIterator.cs">
+      <Link>Msg\StringIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library\RISCommonLibrary\Lib\Utils\MBCSHelper.cs">
+      <Link>Utils\MBCSHelper.cs</Link>
+    </Compile>
+    <Compile Include="CommonUI\SearchNodeHelper.cs" />
+    <Compile Include="CommonUI\ToolStripMenuItemWithMsg.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonUI\MaxByteLengthTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MsgEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgEditorForm.Designer.cs">
+      <DependentUpon>MsgEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MsgEditorForm.resx">
+      <DependentUpon>MsgEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CommonUI\TreeNodeWithBaseNode.cs" />
+    <Compile Include="SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Edit file.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

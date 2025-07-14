@@ -1,0 +1,119 @@
+DEBUG 2019-07-11 17:45:16.659 [1] ARISSend.Model.ToHisInfoHelper WriteDataReaderLogForLog4net - Index:40, Name:HTMLTEMPLATEID, FieldType:System.Int32, IsDBNull:False, Value:11
+DEBUG 2019-07-11 17:45:16.671 [1] ARISSend.Model.ToHisInfoHelper WriteDataReaderLogForLog4net - Index:41, Name:HTMLFORMID, FieldType:System.Int32, IsDBNull:False, Value:14
+DEBUG 2019-07-11 17:45:16.676 [1] ARISSend.Model.ToHisInfoHelper WriteDataReaderLogForLog4net - Index:42, Name:PREFIXDOCTOR, FieldType:System.String, IsDBNull:True, Value:
+DEBUG 2019-07-11 17:45:16.681 [1] ARISSend.Model.ToHisInfoHelper WriteDataReaderLogForLog4net - Index:43, Name:PREFIXDOCTORCODE, FieldType:System.String, IsDBNull:True, Value:
+DEBUG 2019-07-11 17:45:16.714 [1] ARISSend.Model.ToHisInfoHelper WriteDataReaderLogForLog4net - Index:44, Name:DOCUMENTHTMLCSS, FieldType:System.String, IsDBNull:False, Value:CmnStyle_V4.css
+OGK_43.css
+CmnStyle_Button.css
+DEBUG 2019-07-11 17:45:16.721 [1] ARISSend.Model.ToHisInfoHelper WriteDataReaderLogForLog4net - Index:45, Name:FINDINGS_C, FieldType:System.String, IsDBNull:True, Value:
+INFO  2019-07-11 17:45:18.266 [1] ARISSend.Model.ToHisInfoSender Send - IF処理開始します。RequestID=1000102
+DEBUG 2019-07-11 17:45:18.272 [1] ARISSend.Model.ToHisInfoSender Send - 古いログファイルを削除します
+DEBUG 2019-07-11 17:45:18.288 [1] ARISSend.Model.ToHisInfoSender Send - 電文作成者を作成します
+INFO  2019-07-11 17:45:19.938 [1] ARISSend.Model.ToHisInfoSender Send - 電文を作成します。種別=1000102
+INFO  2019-07-11 17:45:20.978 [1] ARISSend.Model.MessageCreator.BaseMsgCreator CreateMsg - 受付情報を取得します
+DEBUG 2019-07-11 17:45:20.991 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDbCommandLogForLog4net - SELECT EI.ODRID odrid, EI.PATID patid, TO_CHAR(RI.CHECKDATE, 'YYYYMMDD') checkdate_yyyymmdd, TO_CHAR(RI.CHECKDATE, 'HH24MI') checkdate_hh24mi FROM EXAMINFO EI JOIN REPORTINFO RI ON  EI.RPTID = RI.ID JOIN USERMANAGE UM ON  RI.CHECKDOCTOR = UM.USERID WHERE EI.RPTID = :rptid 
+DEBUG 2019-07-11 17:45:20.999 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDbCommandLogForLog4net - Index:0,Direction:Input,IsNullable:False,Name:rptid,Type:String,Value:1000102
+DEBUG 2019-07-11 17:45:21.013 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - リーダオブジェクトをログ出力します
+DEBUG 2019-07-11 17:45:21.018 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:0, Name:ODRID, FieldType:System.String, IsDBNull:False, Value:0113980500000007
+DEBUG 2019-07-11 17:45:21.023 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:1, Name:PATID, FieldType:System.String, IsDBNull:False, Value:1139805
+DEBUG 2019-07-11 17:45:21.029 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:2, Name:CHECKDATE_YYYYMMDD, FieldType:System.String, IsDBNull:True, Value:
+DEBUG 2019-07-11 17:45:21.035 [1] ARISSend.Model.MessageCreator.BaseMsgCreator WriteDataReaderLogForLog4net - Index:3, Name:CHECKDATE_HH24MI, FieldType:System.String, IsDBNull:True, Value:
+INFO  2019-07-11 17:45:34.779 [1] ARISSend.Model.ToHisInfoSender Send - 送信処理を行います
+INFO  2019-07-11 17:45:39.214 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 受付:接続します
+DEBUG 2019-07-11 17:45:39.222 [1] ARISSend.Model.ToHisInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.166, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-11 17:45:39.231 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-11 17:45:39.242 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectしました
+DEBUG 2019-07-11 17:45:39.248 [1] ARISSend.Model.MessageCreator.BaseMsgCreator RequestOpen - 受付:回線接続要求を送信します
+DEBUG 2019-07-11 17:45:41.162 [1] ARISSend.Model.ToHisInfoTcpClient SendRecv - ソケット送信します
+INFO  2019-07-11 17:45:41.171 [1] ARISSend.Model.ToHisInfoTcpClient SendRecv - ソケット送信電文ログファイル名=20190711174541168_10_SEND.log
+INFO  2019-07-11 17:45:41.183 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendします
+INFO  2019-07-11 17:45:41.311 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendしました
+DEBUG 2019-07-11 17:45:41.318 [1] ARISSend.Model.ToHisInfoTcpClient SendRecv - ソケット受信します
+INFO  2019-07-11 17:45:41.336 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readします
+DEBUG 2019-07-11 17:45:41.343 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadStart
+ERROR 2019-07-11 17:46:11.524 [1] ARISSend.Model.ToHisInfoSender SendInner - IOエラーが発生しました。System.IO.IOException: 転送接続からデータを読み取れません: 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。。 ---> System.Net.Sockets.SocketException: 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。
+   場所 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- 内部例外スタック トレースの終わり ---
+   場所 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   場所 RISCommonLibrary.Lib.Compornent.SimpleTcpClient.Read() 場所 C:\taira_work\RIS\Library\RISCommonLibrary\Lib\Compornent\SimpleTcpClient.cs:行 118
+   場所 ARISSend.Model.ToHisInfoTcpClient.SendRecv(BaseMsgData msgData) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoTcpClient.cs:行 81
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.RequestConnection(CreateMsgDataForConnection func) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 153
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.RequestOpen() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 127
+   場所 ARISSend.Model.ToHisInfoSender.SendInner(ReportInfo target, IDbConnection connection, BaseMsgCreator messageCreator, BaseSendMsgData msgData) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoSender.cs:行 182System.Net.Sockets.SocketException (0x80004005): 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。
+   場所 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size), ErrorCode=10060, SocketErrorCode=TimedOut Inner:System.IO.IOException: 転送接続からデータを読み取れません: 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。。 ---> System.Net.Sockets.SocketException: 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。
+   場所 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- 内部例外スタック トレースの終わり ---
+   場所 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   場所 RISCommonLibrary.Lib.Compornent.SimpleTcpClient.Read() 場所 C:\taira_work\RIS\Library\RISCommonLibrary\Lib\Compornent\SimpleTcpClient.cs:行 118
+   場所 ARISSend.Model.ToHisInfoTcpClient.SendRecv(BaseMsgData msgData) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoTcpClient.cs:行 81
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.RequestConnection(CreateMsgDataForConnection func) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 153
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.RequestOpen() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 127
+   場所 ARISSend.Model.ToHisInfoSender.SendInner(ReportInfo target, IDbConnection connection, BaseMsgCreator messageCreator, BaseSendMsgData msgData) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoSender.cs:行 182System.Net.Sockets.SocketException (0x80004005): 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。
+   場所 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size), ErrorCode=10060, SocketErrorCode=TimedOut
+INFO  2019-07-11 17:46:11.532 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 受付:切断します
+DEBUG 2019-07-11 17:46:11.538 [1] ARISSend.Model.ToHisInfoTcpClient DisConnectTcp - DisConnectTcpします
+DEBUG 2019-07-11 17:46:11.544 [1] ARISSend.Model.ToHisInfoTcpClient DisConnectTcp - ソケット切断します
+DEBUG 2019-07-11 17:46:11.550 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-11 17:46:11.559 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-11 17:46:11.564 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました
+DEBUG 2019-07-11 17:46:11.571 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-11 17:46:11.676 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました
+DEBUG 2019-07-11 17:46:11.689 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+DEBUG 2019-07-11 17:46:11.713 [1] ARISSend.Model.ToHisInfoTcpClient DisConnectTcp - DisConnectTcpしました
+DEBUG 2019-07-11 17:46:11.720 [1] ARISSend.Model.ToHisInfoSender IncRetryCountAndDisConnect - リトライスリープします=10000
+WARN  2019-07-11 17:46:21.729 [1] ARISSend.Model.ToHisInfoSender SendInner - リトライを行います。1回目
+INFO  2019-07-11 17:46:21.746 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 受付:接続します
+DEBUG 2019-07-11 17:46:21.758 [1] ARISSend.Model.ToHisInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.166, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-11 17:46:21.765 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-11 17:46:21.773 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectしました
+DEBUG 2019-07-11 17:46:21.779 [1] ARISSend.Model.MessageCreator.BaseMsgCreator RequestOpen - 受付:回線接続要求を送信します
+DEBUG 2019-07-11 17:46:27.890 [1] ARISSend.Model.ToHisInfoTcpClient SendRecv - ソケット送信します
+INFO  2019-07-11 17:46:27.898 [1] ARISSend.Model.ToHisInfoTcpClient SendRecv - ソケット送信電文ログファイル名=20190711174627898_10_SEND.log
+INFO  2019-07-11 17:46:27.913 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendします
+INFO  2019-07-11 17:46:27.920 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendしました
+DEBUG 2019-07-11 17:46:27.926 [1] ARISSend.Model.ToHisInfoTcpClient SendRecv - ソケット受信します
+INFO  2019-07-11 17:46:27.933 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readします
+DEBUG 2019-07-11 17:46:27.942 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadStart
+ERROR 2019-07-11 17:46:57.982 [1] ARISSend.Model.ToHisInfoSender SendInner - IOエラーが発生しました。System.IO.IOException: 転送接続からデータを読み取れません: 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。。 ---> System.Net.Sockets.SocketException: 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。
+   場所 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- 内部例外スタック トレースの終わり ---
+   場所 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   場所 RISCommonLibrary.Lib.Compornent.SimpleTcpClient.Read() 場所 C:\taira_work\RIS\Library\RISCommonLibrary\Lib\Compornent\SimpleTcpClient.cs:行 118
+   場所 ARISSend.Model.ToHisInfoTcpClient.SendRecv(BaseMsgData msgData) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoTcpClient.cs:行 81
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.RequestConnection(CreateMsgDataForConnection func) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 153
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.RequestOpen() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 127
+   場所 ARISSend.Model.ToHisInfoSender.SendInner(ReportInfo target, IDbConnection connection, BaseMsgCreator messageCreator, BaseSendMsgData msgData) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoSender.cs:行 182System.Net.Sockets.SocketException (0x80004005): 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。
+   場所 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size), ErrorCode=10060, SocketErrorCode=TimedOut Inner:System.IO.IOException: 転送接続からデータを読み取れません: 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。。 ---> System.Net.Sockets.SocketException: 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。
+   場所 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- 内部例外スタック トレースの終わり ---
+   場所 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   場所 RISCommonLibrary.Lib.Compornent.SimpleTcpClient.Read() 場所 C:\taira_work\RIS\Library\RISCommonLibrary\Lib\Compornent\SimpleTcpClient.cs:行 118
+   場所 ARISSend.Model.ToHisInfoTcpClient.SendRecv(BaseMsgData msgData) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoTcpClient.cs:行 81
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.RequestConnection(CreateMsgDataForConnection func) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 153
+   場所 ARISSend.Model.MessageCreator.BaseMsgCreator.RequestOpen() 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\MessageCreator\BaseMsgCreator.cs:行 127
+   場所 ARISSend.Model.ToHisInfoSender.SendInner(ReportInfo target, IDbConnection connection, BaseMsgCreator messageCreator, BaseSendMsgData msgData) 場所 C:\taira_work\RIS\Project\ReportKidokuInterface\ARISSendReceipt\Model\ToHisInfoSender.cs:行 182System.Net.Sockets.SocketException (0x80004005): 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。
+   場所 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size), ErrorCode=10060, SocketErrorCode=TimedOut
+INFO  2019-07-11 17:46:57.989 [1] ARISSend.Model.MessageCreator.BaseMsgCreator DisConnectTcp - 受付:切断します
+DEBUG 2019-07-11 17:46:57.997 [1] ARISSend.Model.ToHisInfoTcpClient DisConnectTcp - DisConnectTcpします
+DEBUG 2019-07-11 17:46:58.005 [1] ARISSend.Model.ToHisInfoTcpClient DisConnectTcp - ソケット切断します
+DEBUG 2019-07-11 17:46:58.012 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectします
+DEBUG 2019-07-11 17:46:58.020 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamします
+DEBUG 2019-07-11 17:46:58.026 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseNetworkStream - CloseNetworkStreamしました
+DEBUG 2019-07-11 17:46:58.034 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientします
+DEBUG 2019-07-11 17:46:58.041 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient CloseTcpClient - CloseTcpClientしました
+DEBUG 2019-07-11 17:46:58.047 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient DisConnect - DisConnectしました
+DEBUG 2019-07-11 17:46:58.053 [1] ARISSend.Model.ToHisInfoTcpClient DisConnectTcp - DisConnectTcpしました
+DEBUG 2019-07-11 17:46:58.060 [1] ARISSend.Model.ToHisInfoSender IncRetryCountAndDisConnect - リトライスリープします=10000
+WARN  2019-07-11 17:47:08.067 [1] ARISSend.Model.ToHisInfoSender SendInner - リトライを行います。2回目
+INFO  2019-07-11 17:47:08.086 [1] ARISSend.Model.MessageCreator.BaseMsgCreator ConnectTcp - 受付:接続します
+DEBUG 2019-07-11 17:47:08.106 [1] ARISSend.Model.ToHisInfoTcpClient ConnectTcp - ソケット接続します。Host=192.168.100.166, Port=16030, ConnectionTimeout=10000, SendTimeout=30000, ReceiveTimeout=30000
+DEBUG 2019-07-11 17:47:08.118 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectします
+DEBUG 2019-07-11 17:47:08.136 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Connect - Connectしました
+DEBUG 2019-07-11 17:47:08.145 [1] ARISSend.Model.MessageCreator.BaseMsgCreator RequestOpen - 受付:回線接続要求を送信します
+DEBUG 2019-07-11 17:47:12.238 [1] ARISSend.Model.ToHisInfoTcpClient SendRecv - ソケット送信します
+INFO  2019-07-11 17:47:12.244 [1] ARISSend.Model.ToHisInfoTcpClient SendRecv - ソケット送信電文ログファイル名=20190711174712244_10_SEND.log
+INFO  2019-07-11 17:47:12.276 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendします
+INFO  2019-07-11 17:47:12.282 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Send - Sendしました
+DEBUG 2019-07-11 17:47:12.288 [1] ARISSend.Model.ToHisInfoTcpClient SendRecv - ソケット受信します
+INFO  2019-07-11 17:47:12.295 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - Readします
+DEBUG 2019-07-11 17:47:12.301 [1] RISCommonLibrary.Lib.Compornent.SimpleTcpClient Read - ReadStart
