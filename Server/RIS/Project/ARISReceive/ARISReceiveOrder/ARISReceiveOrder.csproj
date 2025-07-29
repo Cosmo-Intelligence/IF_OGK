@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ARISReceive</RootNamespace>
     <AssemblyName>ARISReceiveOrder</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>Download Database.ico</ApplicationIcon>
     <FileUpgradeFlags>
@@ -88,7 +88,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -110,20 +110,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net">
-      <HintPath>..\..\Library\bin\log4net.dll</HintPath>
+      <HintPath>..\..\..\Library\bin\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Library\bin\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="RISBizLibrary">
-      <HintPath>..\..\Library\bin\RISBizLibrary.dll</HintPath>
+      <HintPath>..\..\..\Library\bin\RISBizLibrary.dll</HintPath>
     </Reference>
     <Reference Include="RISCommonLibrary">
-      <HintPath>..\..\Library\bin\RISCommonLibrary.dll</HintPath>
+      <HintPath>..\..\..\Library\bin\RISCommonLibrary.dll</HintPath>
     </Reference>
     <Reference Include="RISODPLibrary">
-      <HintPath>..\..\Library\bin\RISODPLibrary.dll</HintPath>
+      <HintPath>..\..\..\Library\bin\RISODPLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

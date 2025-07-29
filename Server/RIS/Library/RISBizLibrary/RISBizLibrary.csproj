@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RISBizLibrary</RootNamespace>
     <AssemblyName>RISBizLibrary</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -85,15 +85,13 @@
       <HintPath>..\bin\Oracle.DataAccess.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="RISCommonLibrary, Version=1.0.6989.31257, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="RISCommonLibrary, Version=1.0.9329.17768, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\RISCommonLibrary.dll</HintPath>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="RISODPLibrary, Version=1.0.6989.31326, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="RISODPLibrary, Version=1.0.9329.17767, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\RISODPLibrary.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

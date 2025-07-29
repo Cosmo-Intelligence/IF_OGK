@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ARISReceive</RootNamespace>
     <AssemblyName>ARISReceiveHospital</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>Download Database.ico</ApplicationIcon>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -94,17 +94,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net">
-      <HintPath>..\..\Library\bin\log4net.dll</HintPath>
+      <HintPath>..\..\..\Library\bin\log4net.dll</HintPath>
     </Reference>
     <Reference Include="RISBizLibrary">
-      <HintPath>..\..\Library\bin\RISBizLibrary.dll</HintPath>
+      <HintPath>..\..\..\Library\bin\RISBizLibrary.dll</HintPath>
     </Reference>
     <Reference Include="RISCommonLibrary">
-      <HintPath>..\..\Library\bin\RISCommonLibrary.dll</HintPath>
+      <HintPath>..\..\..\Library\bin\RISCommonLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="RISODPLibrary, Version=1.0.8490.37087, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Library\bin\RISODPLibrary.dll</HintPath>
+    <Reference Include="RISODPLibrary">
+      <HintPath>..\..\..\Library\bin\RISODPLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -219,6 +218,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
