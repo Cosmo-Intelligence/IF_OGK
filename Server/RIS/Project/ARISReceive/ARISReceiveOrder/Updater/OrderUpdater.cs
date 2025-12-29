@@ -205,7 +205,15 @@ namespace ARISReceive.Updater
 					_log.Debug("TOREPORTINFO更新処理を行います");
 					TOREPORTINFOUpdater toReportInfoUpdater = new TOREPORTINFOUpdater();
 					toReportInfoUpdater.Execute(data, command);
+
+					// 大垣市民病院向けHIS通信機能 改造対応 2025.12.24 sta
+					_log.Debug("TOHISINFO更新処理を行います");
+					TOHISINFOUpdaterOrder toHisInfoUpdater = new TOHISINFOUpdaterOrder();
+					toHisInfoUpdater.Execute(data, command);
+					// 大垣市民病院向けHIS通信機能 改造対応 2025.12.24 end
+
 				}
+
 			}
 			_log.Debug("InsertOrUpdate終了しました");
 		}

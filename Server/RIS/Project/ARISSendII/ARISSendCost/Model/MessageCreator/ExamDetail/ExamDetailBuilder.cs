@@ -231,6 +231,7 @@ namespace ARISSend.Model.MessageCreator.ExamDetail
 				"ez.no, " +
 				"ez.parts_id, " +
 				"ez.suuryou_iji, " +
+				"ez.suuryou, " +
 				"ez.partsbunrui_id, " +
 				"p.zoueizaiijitanni_id " +
 			"FROM " +
@@ -249,6 +250,7 @@ namespace ARISSend.Model.MessageCreator.ExamDetail
 			const string FIELD_NO = "no";
 			const string FIELD_PARTS_ID = "parts_id";
 			const string FIELD_SUURYOU_IJI = "suuryou_iji";
+			const string FIELD_SUURYOU = "suuryou";
 			const string FIELD_PARTSBUNRUI_ID = "partsbunrui_id";
 			const string FIELD_ZOUEIZAIIJITANNI_ID = "zoueizaiijitanni_id";
 
@@ -279,6 +281,7 @@ namespace ARISSend.Model.MessageCreator.ExamDetail
 						data.NO = reader.GetStringByDBInt32(FIELD_NO);
 						data.PARTS_ID = reader.GetStringByDBString(FIELD_PARTS_ID);
 						data.SUURYOU_IJI = reader.GetStringByDBDecimal(FIELD_SUURYOU_IJI);
+						data.SUURYOU = reader.GetStringByDBDecimal(FIELD_SUURYOU);
 						data.PARTSBUNRUI_ID = reader.GetStringByDBInt32(FIELD_PARTSBUNRUI_ID);
 						data.ZOUEIZAIIJITANNI_ID = reader.GetStringByDBString(FIELD_ZOUEIZAIIJITANNI_ID);
 						list.Add(data);
@@ -565,6 +568,7 @@ namespace ARISSend.Model.MessageCreator.ExamDetail
 				detail.COMMENT_KIND.Data = MsgConst.ORDER_COMMENT_KIND_DEFAULT;
 				detail.ITEM_CODE.Data = item.PARTS_ID;
 				detail.FIGURE.Data = GetSuryo(item.SUURYOU_IJI);
+				detail.LOSS.Data = GetSuryo(item.SUURYOU);
 				detail.UNIT.Data = item.ZOUEIZAIIJITANNI_ID;
 				examDetailDynamicArray.Add(detail);
 			}
@@ -584,6 +588,7 @@ namespace ARISSend.Model.MessageCreator.ExamDetail
 				detail.COMMENT_KIND.Data = MsgConst.ORDER_COMMENT_KIND_DEFAULT;
 				detail.ITEM_CODE.Data = item.PARTS_ID;
 				detail.FIGURE.Data = GetSuryo(item.SUURYOU_IJI);
+				detail.LOSS.Data = GetSuryo(item.SUURYOU);
 				detail.UNIT.Data = item.ZOUEIZAIIJITANNI_ID;
 				examDetailDynamicArray.Add(detail);
 			}

@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ARISSend</RootNamespace>
     <AssemblyName>ARISSendPatient</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>Upload Database.ico</ApplicationIcon>
     <FileUpgradeFlags>
@@ -69,13 +69,13 @@
       <HintPath>..\..\..\Library\bin\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="RISBizLibrary">
-      <HintPath>..\..\..\Library\bin\RISBizLibrary.dll</HintPath>
+      <HintPath>..\ARISSendReceipt\bin\RISBizLibrary.dll</HintPath>
     </Reference>
     <Reference Include="RISCommonLibrary">
-      <HintPath>..\..\..\Library\bin\RISCommonLibrary.dll</HintPath>
+      <HintPath>..\ARISSendReceipt\bin\RISCommonLibrary.dll</HintPath>
     </Reference>
     <Reference Include="RISODPLibrary">
-      <HintPath>..\..\..\Library\bin\RISODPLibrary.dll</HintPath>
+      <HintPath>..\ARISSendReceipt\bin\RISODPLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

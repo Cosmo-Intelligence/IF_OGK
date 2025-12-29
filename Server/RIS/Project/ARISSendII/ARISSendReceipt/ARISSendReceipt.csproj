@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ARISSend</RootNamespace>
     <AssemblyName>ARISSendReceipt</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>Upload Database.ico</ApplicationIcon>
     <FileUpgradeFlags>
@@ -65,14 +65,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Library\bin\Oracle.DataAccess.dll</HintPath>
     </Reference>
-    <Reference Include="RISBizLibrary">
-      <HintPath>..\..\..\Library\bin\RISBizLibrary.dll</HintPath>
+    <Reference Include="RISBizLibrary, Version=1.0.9491.2529, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RISBizLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="RISCommonLibrary">
-      <HintPath>..\..\..\Library\bin\RISCommonLibrary.dll</HintPath>
+    <Reference Include="RISCommonLibrary, Version=1.0.9491.2529, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RISCommonLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="RISODPLibrary">
-      <HintPath>..\..\..\Library\bin\RISODPLibrary.dll</HintPath>
+    <Reference Include="RISODPLibrary, Version=1.0.9491.2529, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RISODPLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

@@ -83,7 +83,9 @@ namespace ARISReceive.Updater.Table
 			OrderDetailArrayHelper helper = order.ORDER_DETAIL_SUMM.GetHelper();
 
 			SetStringToCommand(PARAM_NAME_RIS_ID, orderData.RIS_ID, command); //RIS識別ID
-			SetStringToCommand(PARAM_NAME_KENSA_SIJI, order.EXAM_PURPOSE.TrimData, command); //検査目的
+			//SetStringToCommand(PARAM_NAME_KENSA_SIJI, order.EXAM_PURPOSE.TrimData, command); //検査目的
+			const int MAX_LENGTH_KENSA_SIJI = 4000;
+			SetStringToCommand(PARAM_NAME_KENSA_SIJI, MBCSHelper.Copy(order.EXAM_PURPOSE.TrimData, 1, MAX_LENGTH_KENSA_SIJI), command); //検査目的
 
 			StringBuilder sbORDERCOMMENT_ID = new StringBuilder();
 			StringBuilder sbREMARKS = new StringBuilder();

@@ -53,6 +53,15 @@ namespace ARISSend.Model.MessageCreator.ExamDetail
 		}
 
 		/// <summary>
+		/// 数量
+		/// </summary>
+		public string SUURYOU
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
 		/// 器材区分ID
 		/// </summary>
 		public string PARTSBUNRUI_ID

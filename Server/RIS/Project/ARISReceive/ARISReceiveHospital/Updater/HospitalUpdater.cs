@@ -6,6 +6,8 @@ using RISBizLibrary.Data;
 using RISBizLibrary.Updater.Table;
 using RISCommonLibrary.Lib.Utils;
 using RISODPLibrary.Lib.Utils;
+using RISCommonLibrary.Lib.Msg;
+using ARISReceive.Data;
 
 namespace ARISReceive.Updater
 {
@@ -31,7 +33,7 @@ namespace ARISReceive.Updater
 		/// </summary>
 		/// <param name="data"></param>
 		/// <param name="cn"></param>
-		public void InsertOrUpdate(BaseMsgData data, IDbConnection cn)
+		public void InsertOrUpdate(HospitalMsgData data, IDbConnection cn)
 		{
 			_log.Debug("InsertOrUpdate開始します");
 			IDbTransaction tr = cn.BeginTransaction();
@@ -60,7 +62,7 @@ namespace ARISReceive.Updater
 		/// <param name="data"></param>
 		/// <param name="cn"></param>
 		/// <param name="tr"></param>
-		private void InsertOrUpdateWithTran(BaseMsgData data, IDbConnection cn, IDbTransaction tr)
+		private void InsertOrUpdateWithTran(HospitalMsgData data, IDbConnection cn, IDbTransaction tr)
 		{
 			_log.Debug("InsertOrUpdateWithTran開始します");
 			_log.Debug("入退院更新処理を行います");
@@ -80,6 +82,10 @@ namespace ARISReceive.Updater
 				_log.Debug("FROMHISINFO更新処理を行います");
 				FROMHISINFOUpdater fromHisInfoUpdater = new FROMHISINFOUpdaterHospital();
 				fromHisInfoUpdater.Execute(data, command);
+
+				_log.Debug("TOHISINFO更新処理を行います");
+				TOHISINFOUpdaterHospital toHisInfoUpdater = new TOHISINFOUpdaterHospital();
+				toHisInfoUpdater.Execute(data, command);
 			}
 			_log.Debug("InsertOrUpdateWithTran終了しました");
 		}
